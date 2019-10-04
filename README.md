@@ -31,10 +31,10 @@
 ## 2. 安装
 -------
 
-1. 下载macOS原版镜像（或者其他人提供带引导的也可以），文件格式为**`dmg`**；
+1. 下载macOS原版镜像（或者其他人提供带引导的也可以），文件格式为`dmg`；
 2. 使用[`etcher`](https://www.balena.io/etcher/)等工具刻录镜像至U盘；
-3. 将提供的`CLOVER`文件夹通过各种手段（不一一列举）放在硬盘的**`EFI`**分区中的**`EFI`**文件夹下，并使用**`bootice`**添加引导项；
-4. 重启在HP logo出现时按**`F10`**进入**`BIOS`**，……；
+3. 将提供的`CLOVER`文件夹通过各种手段（不一一列举）放在硬盘的`EFI`分区中的`EFI`文件夹下，并使用`bootice`添加引导项；
+4. 重启在HP logo出现时按`F10`进入`BIOS`，……；
 5. 在`CLOVER`中选择`macOS Install from XXX(表示移动设备)`进入安装界面。如果在这步出现问题，请参考下面的问题部分1；
 6. 这步和白果一样，分区啊什么乱七八糟的。这里需要记下自己安装macOS的分区名称；
 7. 安装中间会重启一次，重启后在`CLOVER`中选择`macOS Install from XXX(这次是你的分区名称)`，这步安装完成后会再次重启。如果在这步出现问题请参考下面的问题部分1；
@@ -53,8 +53,8 @@
 
 ## 鸣谢
 -------
-以下排名不分先后：
-[Acidanthera](https://github.com/acidanthera)提供的各种驱动、[Daliansky（黑果小兵）](https://github.com/daliansky/)及其[博客](https://blog.daliansky.net/)提供的首版引导和DW1820A驱动方式及睡眠修复方法、[JardenLiu](https://github.com/jardenliu)提供的XPS15教程以及一系列讲解、[Rehabman](https://bitbucket.org/%7Be26fb9ce-5cc2-4e36-8576-7a8faae8e194%7D/)提供的一系列补丁
+以下排名不分先后：<br>
+[Acidanthera](https://github.com/acidanthera)提供的各种驱动、[Daliansky（黑果小兵）](https://github.com/daliansky/)及其[博客](https://blog.daliansky.net/)提供的首版引导和DW1820A驱动方式及睡眠修复方法、[JardenLiu](https://github.com/jardenliu)提供的XPS15教程以及一系列讲解、[Rehabman](https://bitbucket.org/%7Be26fb9ce-5cc2-4e36-8576-7a8faae8e194%7D/)提供的一系列补丁、以及很多朋友提供的问题反馈！
 
 
 -------
