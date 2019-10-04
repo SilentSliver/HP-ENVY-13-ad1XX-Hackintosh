@@ -17,7 +17,7 @@
 -------
 
 1. 目前兼容10.15；
-2. 该配置是最早[daliansky](https://github.com/daliansky/)维护的，我对其进行了一定的完善。
+2. 该配置是最早[daliansky](https://github.com/daliansky/)维护的，我对其进行了一定的更新；
 3. 显卡FakeID `56160000`，仿冒的`HD 620`；
 4. 声卡LayoutID `1c`，注入的ID `28`，驱动的是前面板的扬声器；
 5. 原生网卡Intel AC7290，用不了的，这里我用的网卡DW1820A（DW1830、DW1560也可以），仿冒的`14e4,4353`；注意：如果您使用的是DW1820A网卡，需要将`CLOVER/ACPI/patched`中的`SSDT-WIFI.aml`替换成`Post-Install/DW1820A`中的`SSDT-WIFI.aml`即可；
