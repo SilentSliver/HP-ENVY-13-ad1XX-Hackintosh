@@ -20,7 +20,7 @@
 2. 该配置是最早[daliansky](https://github.com/daliansky/)维护的，我对其进行了一定的完善。
 3. 显卡FakeID `56160000`，仿冒的`HD 620`；
 4. 声卡LayoutID `1c`，注入的ID `28`，驱动的是前面板的扬声器；
-5. 原生网卡Intel AC7290，用不了的，这里我用的网卡DW1820A（DW1830、DW1560也可以），仿冒的`14e4,4353`；注意：如果您使用的是DW1820A网卡，需要将`CLOVER/ACPI/patched`中的`SSDT-WIFI.aml`替换成`Post-Install/DW1820A`中的`SSDT-WIFI.aml`即可；
+5. 原生网卡Intel AC7265，用不了的，这里我用的网卡DW1820A（DW1830、DW1560也可以），仿冒的`14e4,4353`；注意：如果您使用的是DW1820A网卡，需要将`CLOVER/ACPI/patched`中的`SSDT-WIFI.aml`替换成`Post-Install/DW1820A`中的`SSDT-WIFI.aml`即可；
 6. 触控板使用的白果手势，但是可能因为本身触控板过小，四指捏合和张开并不能使用；
 7. 如果使用的是DW1820A，Airdrop和HandOff没有问题，但是Sidecar可能不能用。其他网卡没有数据，自行测试；
 8. 亮度调节可用，但亮度快捷键部分有问题，可以外接键盘后在`系统偏好设置`修改快捷键为`Fn+F2`和`Fn+F3`拔掉外接键盘就可以正常使用了；
