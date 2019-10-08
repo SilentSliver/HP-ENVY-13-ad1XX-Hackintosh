@@ -179,34 +179,6 @@
 					RUNfXw==
 					</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(_Q11,0,N) to XQ11, optionally pair with SSDT-FN.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1ExMQA=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFExMQA=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(_Q10,0,N) to XQ10, optionally pair with SSDT-FN.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1ExMAA=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFExMAA=
-					</data>
-				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
