@@ -11,7 +11,7 @@
 | CPU | Intel Core i5-8250U |
 | GPU | Intel Graphics UHD 620 |
 | Audio | Realtec ALC298 |
-| Network | Dell Wireless 1820a |
+| Network | Dell Wireless 1820a(很不稳定，不建议稳定使用) |
 
 ## 1. 说明
 -------
