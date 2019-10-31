@@ -1,8 +1,8 @@
 DefinitionBlock ("", "SSDT", 2, "APPLE ", "SSDT-Bro", 0x00001000)
 {
-    External (_SB_.PCI0.RP06, DeviceObj)
-    External (_SB_.PCI0.RP06.PXSX, DeviceObj)
-    Scope (\_SB.PCI0.RP06)
+    External (_SB_.PCI0.ARP0, DeviceObj)
+    External (_SB_.PCI0.ARP0.PXSX, DeviceObj)
+    Scope (\_SB.PCI0.ARP0)
     {
         Scope (PXSX)
         {
