@@ -19,7 +19,7 @@
 				<key>AddPNLF</key>
 				<true/>
 				<key>FixAirport</key>
-				<true/>
+				<false/>
 				<key>FixSBUS</key>
 				<true/>
 			</dict>
@@ -296,6 +296,8 @@
 			<key>ResetHDA</key>
 			<true/>
 		</dict>
+		<key>HDMIInjection</key>
+		<true/>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x1f,0x3)</key>
@@ -382,9 +384,9 @@
 			</dict>
 		</dict>
 		<key>SetIntelBacklight</key>
-		<false/>
+		<true/>
 		<key>SetIntelMaxBacklight</key>
-		<false/>
+		<true/>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
@@ -516,24 +518,7 @@
 		<key>KernelLapic</key>
 		<false/>
 		<key>KernelPm</key>
-		<true/>
-		<key>KernelToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>disable panic("Invalid waitq: %p", waitq)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				SI09BPFyADHASIne
-				</data>
-				<key>Replace</key>
-				<data>
-				uAQAAADppwAAAJCQ
-				</data>
-			</dict>
-		</array>
+		<false/>
 		<key>KernelXCPM</key>
 		<false/>
 		<key>KextsToPatch</key>
@@ -572,24 +557,6 @@
 				<key>Replace</key>
 				<data>
 				SW50ZXJuYWw=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>IONVMeFamily IONameMatch</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				PHN0cmluZz5wY2kxNDRkLGE4MDQ8L3N0cmluZz4=
-				</data>
-				<key>InfoPlistPatch</key>
-				<true/>
-				<key>Name</key>
-				<string>IONVMeFamily</string>
-				<key>Replace</key>
-				<data>
-				PHN0cmluZz5wY2kxNDRkLGE4MDI8L3N0cmluZz4=
 				</data>
 			</dict>
 		</array>
