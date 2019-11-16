@@ -25,7 +25,7 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change _DSM to XSDM</string>
+					<string>change _DSM to XSDM (Device Special Method)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -35,6 +35,48 @@
 					<key>Replace</key>
 					<data>
 					WERTTQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _OSI to XOSI (OS )</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X09TSQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WE9TSQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _Q13 to XQ13</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1ExMw==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFExMw==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _WAK to ZWAK(1,S)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1dBSwk=
+					</data>
+					<key>Replace</key>
+					<data>
+					WldBSwk=
 					</data>
 				</dict>
 				<dict>
@@ -53,16 +95,16 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _OSI to XOSI</string>
+					<string>change EC0 to EC</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					X09TSQ==
+					RUMwXw==
 					</data>
 					<key>Replace</key>
 					<data>
-					WE9TSQ==
+					RUNfXw==
 					</data>
 				</dict>
 				<dict>
@@ -123,20 +165,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>chang BRT6 to BRTX</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					IEJSVDY=
-					</data>
-					<key>Replace</key>
-					<data>
-					IEJSVFg=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change GFX0 to IGPU</string>
 					<key>Disabled</key>
 					<false/>
@@ -161,132 +189,6 @@
 					<key>Replace</key>
 					<data>
 					U0FUQQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EC0 to EC</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					RUMwXw==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Rename H_EC to EC__</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SF9FQw==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(GPRW,2,N) to XPRW, pair with SSDT-PRW.aml</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					R1BSVwI=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFBSVwI=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(UPBS,0,N) to XPBS</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					VVBCUwA=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFBCUwA=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(UPBI,0,N) to XPBI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					VVBCSQA=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFBCSQA=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(SMWR,4,N) to XMWR</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					U01XUgQ=
-					</data>
-					<key>Replace</key>
-					<data>
-					WE1XUgQ=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(CLRI,0,S) to XLRI</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					Q0xSSQg=
-					</data>
-					<key>Replace</key>
-					<data>
-					WExSSQg=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(INIT,0,S) to XNIT</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SU5JVAg=
-					</data>
-					<key>Replace</key>
-					<data>
-					WE5JVAg=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(SMRD,4,N) to XMRD</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					U01SRAQ=
-					</data>
-					<key>Replace</key>
-					<data>
-					WE1SRAQ=
 					</data>
 				</dict>
 			</array>
@@ -320,6 +222,8 @@
 			<false/>
 			<key>Generate</key>
 			<dict>
+				<key>APLF</key>
+				<false/>
 				<key>CStates</key>
 				<true/>
 				<key>PStates</key>
