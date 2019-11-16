@@ -81,7 +81,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change EC0 to EC</string>
+					<string>Change EC0 to EC (USB Energy Control)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -193,6 +193,70 @@
 					<key>Replace</key>
 					<data>
 					U0FUQQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change BTIF to XTIF (Battery)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QlRJRgk=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFRJRgk=
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					RUNfXw==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change BTST to XTST (Battery)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QlRTVAo=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFRTVAo=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change ITLB to XTLB (Battery)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SVRMQgA=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFRMQgA=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change GBTI to XBTI (Battery)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					R0JUSQE=
+					</data>
+					<key>Replace</key>
+					<data>
+					WEJUSQE=
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					RUNfXw==
 					</data>
 				</dict>
 			</array>
