@@ -15,7 +15,7 @@
 				<key>AddDTGP</key>
 				<true/>
 				<key>AddHDMI</key>
-				<true/>
+				<false/>
 				<key>AddPNLF</key>
 				<true/>
 				<key>FixSBUS</key>
@@ -25,7 +25,7 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>change _DSM to XSDM (Device Special Method)</string>
+					<string>Change _DSM to XSDM (Device Special Method)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -39,7 +39,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _OSI to XOSI (OS )</string>
+					<string>Change _OSI to XOSI (OS Identify)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -53,7 +53,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _Q13 to XQ13</string>
+					<string>Change _Q13 to XQ13 (Bright Function Key)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -67,21 +67,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change _WAK to ZWAK(1,S)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1dBSwk=
-					</data>
-					<key>Replace</key>
-					<data>
-					WldBSwk=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change OSID to IDOS</string>
+					<string>Change OSID to IDOS</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -95,7 +81,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change EC0 to EC</string>
+					<string>Change EC0 to EC</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -109,7 +95,25 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change EHC1 to EH01</string>
+					<string>Change H_EC to EC (USB Energy Control)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SF9FQw==
+					</data>
+					<key>Replace</key>
+					<data>
+					RUNfXw==
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					IoiIiA==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change EHC1 to EH01 (USB2 Inject)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -123,7 +127,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change EHC2 to EH02</string>
+					<string>Change EHC2 to EH02 (USB2 Inject)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -137,7 +141,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change HDAS to HDEF</string>
+					<string>Change HDAS to HDEF (Audio)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -151,7 +155,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change HECI to IMEI</string>
+					<string>Change HECI to IMEI (HECI)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -165,7 +169,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change GFX0 to IGPU</string>
+					<string>Change GFX0 to IGPU (Graphics)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -179,7 +183,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change SAT0 to SATA</string>
+					<string>Change SAT0 to SATA (SATA)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -241,10 +245,8 @@
 			<string>SSDT-NVMe.aml</string>
 			<string>SSDT-DGPU.aml</string>
 			<string>SSDT-BAT0.aml</string>
-			<string>SSDT-PluginType1.aml</string>
+			<string>SSDT-PLUG.aml</string>
 			<string>SSDT-IGPU.aml</string>
-			<string>SSDT-LPC.aml</string>
-			<string>SSDT-IMEI.aml</string>
 			<string>SSDT-PCIList.aml</string>
 			<string>SSDT-PRW.aml</string>
 			<string>SSDT-UIAC.aml</string>
