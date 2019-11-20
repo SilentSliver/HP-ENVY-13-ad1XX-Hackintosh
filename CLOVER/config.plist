@@ -16,6 +16,8 @@
 				<true/>
 				<key>AddHDMI</key>
 				<false/>
+				<key>AddMCHC</key>
+				<true/>
 				<key>AddPNLF</key>
 				<true/>
 				<key>FixSBUS</key>
@@ -39,6 +41,20 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>Change OSID to IDOS</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					T1NJRA==
+					</data>
+					<key>Replace</key>
+					<data>
+					SURPUw==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>Change _OSI to XOSI (OS Identify)</string>
 					<key>Disabled</key>
 					<false/>
@@ -53,30 +69,66 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change _Q13 to XQ13 (Bright Function Key)</string>
+					<string>Change BTIF to XTIF (Battery)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					X1ExMw==
+					QlRJRgk=
 					</data>
 					<key>Replace</key>
 					<data>
-					WFExMw==
+					WFRJRgk=
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					RUNfXw==
 					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change OSID to IDOS</string>
+					<string>Change BTST to XTST (Battery)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					T1NJRA==
+					QlRTVAo=
 					</data>
 					<key>Replace</key>
 					<data>
-					SURPUw==
+					WFRTVAo=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change ITLB to XTLB (Battery)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SVRMQgA=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFRMQgA=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change GBTI to XBTI (Battery)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					R0JUSQE=
+					</data>
+					<key>Replace</key>
+					<data>
+					WEJUSQE=
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					RUNfXw==
 					</data>
 				</dict>
 				<dict>
@@ -105,10 +157,6 @@
 					<key>Replace</key>
 					<data>
 					RUNfXw==
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					IoiIiA==
 					</data>
 				</dict>
 				<dict>
@@ -197,66 +245,52 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change BTIF to XTIF (Battery)</string>
+					<string>Change _Q13 to XQ13 (Bright Function Key)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					QlRJRgk=
+					X1ExMw==
 					</data>
 					<key>Replace</key>
 					<data>
-					WFRJRgk=
+					WFExMw==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change _STA to XSTA (I2C0 Disabled)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1NUQQ==
+					</data>
+					<key>Replace</key>
+					<data>
+					WFNUQQ==
 					</data>
 					<key>TgtBridge</key>
 					<data>
-					RUNfXw==
+					STJDMA==
 					</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change BTST to XTST (Battery)</string>
+					<string>Change _STA to XSTA (I2C1 Disabled)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					QlRTVAo=
+					X1NUQQ==
 					</data>
 					<key>Replace</key>
 					<data>
-					WFRTVAo=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change ITLB to XTLB (Battery)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SVRMQgA=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFRMQgA=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change GBTI to XBTI (Battery)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					R0JUSQE=
-					</data>
-					<key>Replace</key>
-					<data>
-					WEJUSQE=
+					WFNUQQ==
 					</data>
 					<key>TgtBridge</key>
 					<data>
-					RUNfXw==
+					STJDMQ==
 					</data>
 				</dict>
 			</array>
@@ -307,11 +341,12 @@
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-Config.aml</string>
 			<string>SSDT-NVMe.aml</string>
-			<string>SSDT-DGPU.aml</string>
 			<string>SSDT-BAT0.aml</string>
+			<string>SSDT-DMAC.aml</string>
+			<string>SSDT-DGPU.aml</string>
 			<string>SSDT-PLUG.aml</string>
 			<string>SSDT-IGPU.aml</string>
-			<string>SSDT-PCIList.aml</string>
+			<string>SSDT-I2CN.aml</string>
 			<string>SSDT-PRW.aml</string>
 			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-USBX.aml</string>
