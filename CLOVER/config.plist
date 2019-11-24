@@ -133,7 +133,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change EC0 to EC (USB Energy Control)</string>
+					<string>Change EC0 to EC (USB Embedded Control)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -147,7 +147,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change H_EC to EC (USB Energy Control)</string>
+					<string>Change H_EC to EC (USB Embedded Control)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
