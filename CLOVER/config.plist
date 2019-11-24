@@ -21,7 +21,7 @@
 				<key>AddPNLF</key>
 				<true/>
 				<key>FixSBUS</key>
-				<true/>
+				<false/>
 			</dict>
 			<key>Patches</key>
 			<array>
@@ -340,6 +340,7 @@
 		<array>
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-Config.aml</string>
+			<string>SSDT-SBUS.aml</string>
 			<string>SSDT-NVMe.aml</string>
 			<string>SSDT-BAT0.aml</string>
 			<string>SSDT-DMAC.aml</string>
