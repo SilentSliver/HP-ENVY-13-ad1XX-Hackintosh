@@ -21,7 +21,7 @@
 				<key>AddPNLF</key>
 				<true/>
 				<key>FixSBUS</key>
-				<false/>
+				<true/>
 			</dict>
 			<key>Patches</key>
 			<array>
