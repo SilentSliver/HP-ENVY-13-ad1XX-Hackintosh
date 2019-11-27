@@ -69,85 +69,7 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change BTIF to XTIF (Battery)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					QlRJRgk=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFRJRgk=
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change BTST to XTST (Battery)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					QlRTVAo=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFRTVAo=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change ITLB to XTLB (Battery)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SVRMQgA=
-					</data>
-					<key>Replace</key>
-					<data>
-					WFRMQgA=
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change GBTI to XBTI (Battery)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					R0JUSQE=
-					</data>
-					<key>Replace</key>
-					<data>
-					WEJUSQE=
-					</data>
-					<key>TgtBridge</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change EC0 to EC (USB Embedded Control)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					RUMwXw==
-					</data>
-					<key>Replace</key>
-					<data>
-					RUNfXw==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change H_EC to EC (USB Embedded Control)</string>
+					<string>Change H_EC to EC0 (USB Embedded Control)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
@@ -156,7 +78,7 @@
 					</data>
 					<key>Replace</key>
 					<data>
-					RUNfXw==
+					RUMwXw==
 					</data>
 				</dict>
 				<dict>
@@ -189,20 +111,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change HDAS to HDEF (Audio)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					SERBUw==
-					</data>
-					<key>Replace</key>
-					<data>
-					SERFRg==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>Change HECI to IMEI (HECI)</string>
 					<key>Disabled</key>
 					<false/>
@@ -227,6 +135,48 @@
 					<key>Replace</key>
 					<data>
 					SUdQVQ==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change HDAS to HDEF (Audio)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SERBUw==
+					</data>
+					<key>Replace</key>
+					<data>
+					SERFRg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change _PTS to ZPTS (Wake)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1BUUwE=
+					</data>
+					<key>Replace</key>
+					<data>
+					WlBUUwE=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change _WAK to ZWAK (Wake)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					X1dBSwk=
+					</data>
+					<key>Replace</key>
+					<data>
+					WldBSwk=
 					</data>
 				</dict>
 				<dict>
@@ -293,6 +243,70 @@
 					STJDMQ==
 					</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change BTIF to XTIF (Battery)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QlRJRgk=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFRJRgk=
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					RUNfXw==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change BTST to XTST (Battery)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					QlRTVAo=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFRTVAo=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change ITLB to XTLB (Battery)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SVRMQgA=
+					</data>
+					<key>Replace</key>
+					<data>
+					WFRMQgA=
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change GBTI to XBTI (Battery)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					R0JUSQE=
+					</data>
+					<key>Replace</key>
+					<data>
+					WEJUSQE=
+					</data>
+					<key>TgtBridge</key>
+					<data>
+					RUNfXw==
+					</data>
+				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
@@ -338,22 +352,23 @@
 		</dict>
 		<key>SortedOrder</key>
 		<array>
-			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-Config.aml</string>
-			<string>SSDT-SBUS.aml</string>
-			<string>SSDT-NVMe.aml</string>
-			<string>SSDT-BAT0.aml</string>
-			<string>SSDT-DMAC.aml</string>
-			<string>SSDT-DGPU.aml</string>
+			<string>SSDT-XOSI.aml</string>
+			<string>SSDT-PTSWAK.aml</string>
 			<string>SSDT-PLUG.aml</string>
 			<string>SSDT-IGPU.aml</string>
-			<string>SSDT-I2CN.aml</string>
+			<string>SSDT-DGPU.aml</string>
+			<string>SSDT-EC.aml</string>
+			<string>SSDT-SBUS.aml</string>
+			<string>SSDT-DMAC.aml</string>
+			<string>SSDT-XHC.aml</string>
+			<string>SSDT-PS2D.aml</string>
 			<string>SSDT-PRW.aml</string>
 			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-USBX.aml</string>
-			<string>SSDT-PS2D.aml</string>
-			<string>SSDT-XHC.aml</string>
+			<string>SSDT-I2CN.aml</string>
 			<string>SSDT-RMNE.aml</string>
+			<string>SSDT-BAT0.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -624,92 +639,38 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Unlock 31 Ports at Intel 100 Series Chipset at macOS Sierra</string>
+				<string>Disable AppleIntelLpssI2C</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				g710////EA==
+				SU9LaXQ=
 				</data>
 				<key>InfoPlistPatch</key>
-				<false/>
+				<true/>
 				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
+				<string>com.apple.driver.AppleIntelLpssI2C</string>
 				<key>Replace</key>
 				<data>
-				g710////Gw==
+				SU9LaXM=
 				</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>External icons patch</string>
+				<string>Disable AppleIntelLpssI2CController</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>
-				RXh0ZXJuYWw=
+				SU9LaXQ=
 				</data>
 				<key>InfoPlistPatch</key>
-				<false/>
+				<true/>
 				<key>Name</key>
-				<string>com.apple.driver.AppleAHCIPort</string>
+				<string>com.apple.driver.AppleIntelLpssI2CController</string>
 				<key>Replace</key>
 				<data>
-				SW50ZXJuYWw=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AAQAAIcBAAACBAoAAAQAAA==
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AAgAAIcBAAACBAoAAAgAAA==
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>eDP  port 0000 for Skylake credit syscl</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AAAIAAIAAACYAAAAAQUJAAAEAAA=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AAAIAAAEAACYAAAAAQUJAAAEAAA=
-				</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>0x19160000/etc, 19MB framebuffer 9MB cursor bytes (credit RehabMan)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>
-				AAAgAgAAUAE=
-				</data>
-				<key>InfoPlistPatch</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Replace</key>
-				<data>
-				AAAwAQAAkAA=
+				SU9LaXM=
 				</data>
 			</dict>
 		</array>
