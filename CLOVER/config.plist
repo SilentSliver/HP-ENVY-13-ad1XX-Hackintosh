@@ -69,6 +69,20 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>Change HDAS to HDEF (Audio)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>
+					SERBUw==
+					</data>
+					<key>Replace</key>
+					<data>
+					SERFRg==
+					</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>Change H_EC to EC0 (USB Embedded Control)</string>
 					<key>Disabled</key>
 					<false/>
@@ -139,16 +153,16 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change HDAS to HDEF (Audio)</string>
+					<string>Change _Q13 to XQ13 (Bright Function Key)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
 					<data>
-					SERBUw==
+					X1ExMw==
 					</data>
 					<key>Replace</key>
 					<data>
-					SERFRg==
+					WFExMw==
 					</data>
 				</dict>
 				<dict>
@@ -191,20 +205,6 @@
 					<key>Replace</key>
 					<data>
 					U0FUQQ==
-					</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change _Q13 to XQ13 (Bright Function Key)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>
-					X1ExMw==
-					</data>
-					<key>Replace</key>
-					<data>
-					WFExMw==
 					</data>
 				</dict>
 				<dict>
@@ -356,13 +356,14 @@
 			<string>SSDT-XOSI.aml</string>
 			<string>SSDT-PTSWAK.aml</string>
 			<string>SSDT-PLUG.aml</string>
+			<string>SSDT-HDEF.aml</string>
 			<string>SSDT-IGPU.aml</string>
 			<string>SSDT-DGPU.aml</string>
 			<string>SSDT-EC.aml</string>
+			<string>SSDT-PS2D.aml</string>
 			<string>SSDT-SBUS.aml</string>
 			<string>SSDT-DMAC.aml</string>
 			<string>SSDT-XHC.aml</string>
-			<string>SSDT-PS2D.aml</string>
 			<string>SSDT-PRW.aml</string>
 			<string>SSDT-UIAC.aml</string>
 			<string>SSDT-USBX.aml</string>
@@ -620,7 +621,7 @@
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleIntelCPUPM</key>
-		<false/>
+		<true/>
 		<key>AppleRTC</key>
 		<true/>
 		<key>Debug</key>
