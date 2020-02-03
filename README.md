@@ -26,7 +26,7 @@
 7. 更新VoodooPS2至2.1.1（修复了大写锁定灯的问题）
 8. 添加VirtualSMC 1.1.1 至Post-Install，以供选择
 
-[往期更新]()
+[往期更新](./ChangeLog.md)
 
 ## 说明
 
