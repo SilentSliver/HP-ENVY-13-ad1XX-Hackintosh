@@ -15,6 +15,15 @@
 | Storage | ~~Intel 600P 360G~~ WD SN750 |
 
 ## 更新日志
+### 2020-02-09
+1. 使用VirtualSMC作为主版本维护更新（本次更新时需重置`NVRAM`（Clover界面按`F11`即可））
+2. 重新上传USBPort以保证摄像头正常工作
+3. 添加NVMEFix内和扩展，以获得更好的固态温度表现
+4. 可能解决了安装期间白底灰苹果的问题（但不影响安装）
+5. 精简了Clover所需驱动
+6. 删除/修改了部分SSDT以减少ACPI Error
+7. Drop部分Table加快匹配速度
+
 ### 2020-02-03
 1. 更新AirportBrcmFixup至2.0.6（这版据说给了点对1820a的优化）
 2. 更新AppleALC至1.4.6
