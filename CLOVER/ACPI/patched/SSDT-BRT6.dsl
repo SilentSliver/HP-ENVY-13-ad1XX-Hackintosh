@@ -1,23 +1,10 @@
-/*
- * Intel ACPI Component Architecture
- * AML/ASL+ Disassembler version 20190509 (64-bit version)
- * Copyright (c) 2000 - 2019 Intel Corporation
- * 
- * Disassembling to symbolic ASL+ operators
- *
- * Disassembly of iASL2Clkn3.aml, Sat Jan 11 18:50:55 2020
- *
- * Original Table Header:
- *     Signature        "SSDT"
- *     Length           0x000000FC (252)
- *     Revision         0x02
- *     Checksum         0x89
- *     OEM ID           "hack"
- *     OEM Table ID     "BRT6"
- *     OEM Revision     0x00000000 (0)
- *     Compiler ID      "INTL"
- *     Compiler Version 0x20190509 (538510601)
- */
+/*Rename: _Q13 to XQ13
+*Find:5F513133
+*Replace:58513133
+*Rename:H_EC to EC__
+*Find:485F4543
+*Replace:45435F5F
+*/
 DefinitionBlock ("", "SSDT", 2, "hack", "BRT6", 0x00000000)
 {
     External (_SB_.PCI0.LPCB.EC__, DeviceObj)
