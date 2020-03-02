@@ -28,10 +28,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "SLP5", 0x00000000)
         
         If (_OSI ("Darwin"))
         {
-            If (Arg0 < 1 || Arg0 > 5 )
-            {
-                Arg0 = 3
-            }    
             \_SB_.PCI0.RP01.PXSX.OFF()
         }
 

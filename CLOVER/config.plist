@@ -13,7 +13,7 @@
 				<key>AddMCHC</key>
 				<true/>
 				<key>AddPNLF</key>
-				<true/>
+				<false/>
 				<key>FixAirport</key>
 				<true/>
 				<key>FixSBUS</key>
@@ -303,13 +303,12 @@
 		<key>SortedOrder</key>
 		<array>
 			<string>SSDT-XOSI.aml</string>
-			<string>SSDT-Config.aml</string>
 			<string>SSDT-BAT0.aml</string>
 			<string>SSDT-BRT6.aml</string>
 			<string>SSDT-DMAC.aml</string>
-			<string>SSDT-PRW.aml</string>
-			<string>SSDT-PTSWAK.aml</string>
+			<string>SSDT-PNLF.aml</string>
 			<string>SSDT-RMDC.aml</string>
+			<string>SSDT-SLP5.aml</string>
 		</array>
 	</dict>
 	<key>Boot</key>
@@ -329,26 +328,8 @@
 		<key>Timeout</key>
 		<integer>5</integer>
 	</dict>
-	<key>CPU</key>
-	<dict>
-		<key>HWPEnable</key>
-		<false/>
-	</dict>
 	<key>Devices</key>
 	<dict>
-		<key>AddProperties</key>
-		<array>
-			<dict>
-				<key>Device</key>
-				<string>HDA</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Key</key>
-				<string>layout-id</string>
-				<key>Value</key>
-				<string>03000000 </string>
-			</dict>
-		</array>
 		<key>Properties</key>
 		<dict>
 			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
@@ -556,19 +537,17 @@
 			</dict>
 		</dict>
 		<key>SetIntelBacklight</key>
-		<true/>
+		<false/>
 		<key>SetIntelMaxBacklight</key>
-		<true/>
+		<false/>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
-			<true/>
+			<false/>
 			<key>FixOwnership</key>
 			<true/>
 			<key>HighCurrent</key>
-			<true/>
-			<key>Inject</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>GUI</key>
