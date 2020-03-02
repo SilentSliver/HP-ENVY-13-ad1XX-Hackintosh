@@ -22,6 +22,8 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NDGP", 0x00000000)
 {
     External (_SB_.PCI0.I2C0, DeviceObj)
     External (_SB_.PCI0.I2C1, DeviceObj)
+    External (_SB_.PCI0.I2C0.XSTA, MethodObj)
+    External (_SB_.PCI0.I2C1.XSTA, MethodObj)
     External (_SB_.PCI0.RP01.PXSX._OFF, MethodObj)    // 0 Arguments
     External (_SB_.PCI0.RP05.PXSX._OFF, MethodObj)    // 0 Arguments
 
@@ -30,8 +32,11 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NDGP", 0x00000000)
         Name (_HID, "DGPU1000")  // _HID: Hardware ID
         Method (_INI, 0, NotSerialized)  // _INI: Initialize
         {
-            \_SB.PCI0.RP01.PXSX._OFF ()
-            \_SB.PCI0.RP05.PXSX._OFF ()
+            If (_OSI ("Darwin"))
+            {
+                 \_SB.PCI0.RP01.PXSX._OFF ()
+                 \_SB.PCI0.RP05.PXSX._OFF ()
+            }          
         }
     }
 
@@ -39,7 +44,14 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NDGP", 0x00000000)
     {
         Method (_STA, 0, NotSerialized)  // _STA: Status
         {
-            Return (Zero)
+            If (_OSI ("Darwin"))
+            {
+                Return (0x00)
+            }
+            Else
+            {
+                Return (\_SB.PCI0.I2C0.XSTA ())
+            }   
         }
     }
 
@@ -47,7 +59,14 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NDGP", 0x00000000)
     {
         Method (_STA, 0, NotSerialized)  // _STA: Status
         {
-            Return (Zero)
+            If (_OSI ("Darwin"))
+            {
+                Return (0x00)
+            }
+            Else
+            {
+                Return (\_SB.PCI0.I2C1.XSTA ())
+            }   
         }
     }
 }

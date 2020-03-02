@@ -9,28 +9,32 @@ DefinitionBlock ("", "SSDT", 2, "hack", "BRT6", 0x00000000)
 {
     External (_SB_.PCI0.LPCB.EC__, DeviceObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
+    External (_SB_.PCI0.LPCB.EC__.XQ13, MethodObj)
     External (HKNO, FieldUnitObj)
 
     Scope (_SB.PCI0.LPCB.EC)
     {
         Method (_Q13, 0, Serialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
-            Switch (HKNO)
+            If (_OSI ("Darwin"))
             {
-                Case (0x07)
+                Switch (HKNO)
                 {
-                    Notify (\_SB.PCI0.LPCB.PS2K, 0x0405)
-                    Notify (\_SB.PCI0.LPCB.PS2K, 0x10) // Reserved
+                    Case (0x07)
+                    {
+                        Notify (\_SB.PCI0.LPCB.PS2K, 0x0405)
+                        Notify (\_SB.PCI0.LPCB.PS2K, 0x10) // Reserved
+                    }
+                    Case (0x08)
+                    {
+                        Notify (\_SB.PCI0.LPCB.PS2K, 0x0406)
+                        Notify (\_SB.PCI0.LPCB.PS2K, 0x20) // Reserved
+                    }
                 }
-                Case (0x08)
-                {
-                    Notify (\_SB.PCI0.LPCB.PS2K, 0x0406)
-                    Notify (\_SB.PCI0.LPCB.PS2K, 0x20) // Reserved
-                }
-                Default
-                {
-                }
-
+            }
+            Else
+            {
+                 \_SB.PCI0.LPCB.EC.XQ13 ()
             }
         }
     }
