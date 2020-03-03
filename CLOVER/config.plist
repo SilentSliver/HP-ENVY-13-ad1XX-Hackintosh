@@ -12,12 +12,8 @@
 				<true/>
 				<key>AddMCHC</key>
 				<true/>
-				<key>AddPNLF</key>
-				<false/>
 				<key>FixAirport</key>
 				<true/>
-				<key>FixSBUS</key>
-				<false/>
 			</dict>
 			<key>Patches</key>
 			<array>
@@ -60,6 +56,16 @@
 					<data>SF9FQw==</data>
 					<key>Replace</key>
 					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>Change GPRW to XPRW (Sleep)</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>R1BSVwI=</data>
+					<key>Replace</key>
+					<data>WFBSVwI=</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -168,42 +174,6 @@
 					<data>WEJUSQE=</data>
 					<key>TgtBridge</key>
 					<data>RUNfXw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change _PRW to XPRW at HDAS (Sleep)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1BSVw==</data>
-					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>SERBUw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change _PRW to XPRW at GLAN (Sleep)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1BSVw==</data>
-					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>R0xBTg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change _PRW to XPRW at XHC (Sleep)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1BSVw==</data>
-					<key>Replace</key>
-					<data>WFBSVw==</data>
-					<key>TgtBridge</key>
-					<data>WEhDXw==</data>
 				</dict>
 			</array>
 		</dict>
@@ -542,12 +512,8 @@
 		<false/>
 		<key>USB</key>
 		<dict>
-			<key>AddClockID</key>
-			<false/>
 			<key>FixOwnership</key>
 			<true/>
-			<key>HighCurrent</key>
-			<false/>
 		</dict>
 	</dict>
 	<key>GUI</key>

@@ -1,5 +1,5 @@
-
-DefinitionBlock("", "SSDT", 2, "OCLT", "PNLFACPI", 0)
+// Inject Bright Controller
+DefinitionBlock("", "SSDT", 2, "hack", "PNLF", 0)
 {
     External(_SB.PCI0.GFX0, DeviceObj)
     External(_SB.PCI0.GFX0.DD1F._BCL, MethodObj)
@@ -51,7 +51,7 @@ DefinitionBlock("", "SSDT", 2, "OCLT", "PNLFACPI", 0)
             }
             Method (_DOS, 1, NotSerialized)
             {
-                \_SB.PCI0.GFX0.DD1F._DOS(Arg0)
+                \_SB.PCI0.GFX0._DOS(Arg0)
             }
             // extended _BCM/_BQC for setting "in between" levels
             Method (XBCM, 1, NotSerialized)

@@ -1,11 +1,13 @@
-/*Rename: _Q13 to XQ13
+/*
+*Bright Function Key Fix
+*Rename: _Q13 to XQ13
 *Find:5F513133
 *Replace:58513133
 *Rename:H_EC to EC__
 *Find:485F4543
 *Replace:45435F5F
 */
-DefinitionBlock ("", "SSDT", 2, "hack", "BRT6", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "hack", "BFNK", 0x00000000)
 {
     External (_SB_.PCI0.LPCB.EC__, DeviceObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
