@@ -15,14 +15,15 @@
 
 ## 上次更新
 
-### 2020-03-25
+### 2020-03-28
 
 1. 更新`Lilu`系驱动至最新版
 2. 更新`Clover`至5107
-3. 添加亮度档位，现在背光调节范围更加广了
-4. 添加安卓热点驱动
-5. 调整`SSDT`结构
-6. 今年6-8月份有机会可能考虑迁移到`OpenCore`
+3. 使用`VirtualSMC`方案实现电池补丁
+4. 添加亮度档位，现在背光调节范围更加广了
+5. 添加安卓热点驱动
+6. 调整`SSDT`结构
+7. 今年6-8月份有机会可能考虑迁移到`OpenCore`
 
 当前支持 `macOS 10.15.4`
 [往期更新](./ChangeLog.md)
@@ -31,9 +32,9 @@
 
 **不要开启文件保险箱（FileVault）！！！开了就得重装！！！**
 **尤其是OTA更新系统的时候！！！更新完都看看窗口里是让你干嘛的！！！**
-1. 目前10.15.3没有问题，原则上ad0XX与ad1XX系列是通用，具体是否通用还需要进一步测试；
+1. 目前10.15.4没有问题，原则上ad0XX与ad1XX系列是通用，具体是否通用还需要进一步测试；
 2. 该配置是最早[daliansky](https://github.com/daliansky/)所写的，我对其进行了大量的更新；
-3. 如果你想使用FakeSMC，请将`CLOVER\Kext\Other`中所有带`SMC`字样的文件删掉，并`POST-Install/FakeSMC`中的所有`Kext`后缀文件放至`CLOVER\Kexts\Other`中，并将`POST-Install/FakeSMC`中`efi`后缀文件放至`CLOVER\drivers\UEFI`中，并删掉原先其中的`VirtualSMC.efi`。如果先前已经进入过系统，则还需重置`NVRAM`（Clover界面按`F11`即可）；
+3. 如果你想使用FakeSMC，请将`CLOVER\Kext\Other`中所有带`SMC`字样的文件删掉，并`POST-Install/FakeSMC`中的所有`Kext`后缀文件放至`CLOVER\Kexts\Other`中，并将`POST-Install/FakeSMC`中`efi`后缀文件放至`CLOVER\drivers\UEFI`中，并删掉原先其中的`VirtualSMC.efi`。如果先前已经进入过系统，则还需重置`NVRAM`（Clover界面按`F11`即可），此外您可能还需要`BATC`布丁（`POST-Install\Battery`下的SSDT补丁放在`CLOVER\ACPI\patched`）；
 4. 显卡FakeID `56160000`，仿冒的`HD 620`，如果你遇到开机8苹果一闪而过的情况，可以尝试用`Clover Configurator`在显卡设置部分的`水平同步脉冲宽度`中填入100以解决这个问题；
 5. 亮度调节可用，原生亮度快捷键可用；按键大部分更接近百苹果的方式（这里专指CapsLock键，mac下是短按切换中英，长按是开启Capslock，可在`系统偏好设置`中修改）；
 6. 如果您有独显，并尝试驱动他，这边建议您直接放弃`Hackintosh`；
