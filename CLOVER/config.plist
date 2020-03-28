@@ -131,50 +131,6 @@
 					<key>TgtBridge</key>
 					<data>STJDMQ==</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change BTIF to XTIF (Battery)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>QlRJRgk=</data>
-					<key>Replace</key>
-					<data>WFRJRgk=</data>
-					<key>TgtBridge</key>
-					<data>RUNfXw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change BTST to XTST (Battery)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>QlRTVAo=</data>
-					<key>Replace</key>
-					<data>WFRTVAo=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change ITLB to XTLB (Battery)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>SVRMQgA=</data>
-					<key>Replace</key>
-					<data>WFRMQgA=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change GBTI to XBTI (Battery)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>R0JUSQE=</data>
-					<key>Replace</key>
-					<data>WEJUSQE=</data>
-					<key>TgtBridge</key>
-					<data>RUNfXw==</data>
-				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
@@ -273,10 +229,8 @@
 		<key>SortedOrder</key>
 		<array>
 			<string>SSDT-XOSI.aml</string>
-			<string>SSDT-BAT0.aml</string>
 			<string>SSDT-BRT6.aml</string>
-			<string>SSDT-DMAC.aml</string>
-			<string>SSDT-PNLF.aml</string>
+			<string>SSDT-PCID.aml</string>
 			<string>SSDT-RMDC.aml</string>
 			<string>SSDT-SLP5.aml</string>
 		</array>
