@@ -582,10 +582,6 @@
 		<string>0x28</string>
 		<key>CsrActiveConfig</key>
 		<string>0x67</string>
-		<key>MLB</key>
-		<string>C02CH00GJHCCILVLZ</string>
-		<key>ROM</key>
-		<data>ThP23WGI</data>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>
@@ -599,8 +595,6 @@
 		<string>Mac-827FB448E656EC26</string>
 		<key>BoardManufacturer</key>
 		<string>Apple Inc.</string>
-		<key>BoardSerialNumber</key>
-		<string>C02CH00GJHCCILVLZ</string>
 		<key>BoardType</key>
 		<integer>10</integer>
 		<key>BoardVersion</key>
@@ -629,10 +623,6 @@
 		<string>0x02</string>
 		<key>ProductName</key>
 		<string>MacBookPro15,2</string>
-		<key>SerialNumber</key>
-		<string>C02CH00GJHCC</string>
-		<key>SmUUID</key>
-		<string>FB4B71AE-C8F4-4FA9-BE05-4E13F6DD6188</string>
 		<key>Trust</key>
 		<true/>
 		<key>Version</key>
