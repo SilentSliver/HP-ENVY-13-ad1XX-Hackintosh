@@ -1,6 +1,7 @@
-//
+// Add PCIE Device
 DefinitionBlock ("", "SSDT", 2, "hack", "DMAC", 0)
 {
+    External(_SB.PCI0, DeviceObj)
     External(_SB.PCI0.LPCB, DeviceObj)
 
     Scope (_SB.PCI0.LPCB)
@@ -46,6 +47,24 @@ DefinitionBlock ("", "SSDT", 2, "hack", "DMAC", 0)
                 Else
                 {
                     Return (0x00)
+                }
+            }
+        }
+    }
+    Scope (_SB.PCI0)
+    {
+        Device (MCHC)
+        {
+            Name (_ADR, Zero)
+            Method (_STA, 0, NotSerialized)
+            {
+                If (_OSI ("Darwin"))
+                {
+                    Return (0x0F)
+                }
+                Else
+                {
+                    Return (Zero)
                 }
             }
         }
