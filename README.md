@@ -1,53 +1,44 @@
 # HP-ENVY-13-ad1XX-Hackintosh
 
 惠普 ENVY 13 黑苹果
+**请认真阅读ReadME后再开始动手**
 
 ## 配置
 
-| Specs | Model |
-| --- | --- |
-| Board | HP 83A8 |
-| CPU | Intel Core i5-8250U |
-| GPU | Intel Graphics UHD 620 |
-| Audio | Realtec ALC298 |
-| Network | Dell Wireless ~~1820a~~ 1560 |
-| Storage | ~~Intel 600P 360G~~ WD SN750 |
+| Specs | Detail | Specs | Detail |
+| :---: | :--- | :---: | :--- |
+| Board | HP 83A8 | RAM | 8GBx1 |
+| CPU | Intel Core i5-8250U | Display | BOE070E |
+| GPU | Intel Graphics UHD 620 | Shared VRAM | 128M |
+| Audio | Realtec ALC295 | SMC | VirtualSMC |
+| Network | Dell Wireless 1560 | TrackPad | VoodooPS2(Acidanthera Ver.) |
+| Storage | WD SN750 | Bios | F18-F29 Tested |
 
 ## 上次更新
 
-### 2020-04-06
+### 2020-04-11
 
 1. 更新`Lilu`系驱动至最新版
-2. 更新`Clover`至5108
+2. 更新`Clover`至5109
 3. 使用`VirtualSMC`方案实现电池补丁
-4. 添加亮度档位，现在背光调节范围更加广了
-5. 修复核显HDMI在2K外接分辨率下的兼容性问题（感谢Aris提供的方式）
-6. 尝试解决随机丢失声卡的问题
-7. 添加安卓热点驱动
-8. 调整`SSDT`结构
-9. 今年6-8月份有机会可能考虑迁移到`OpenCore`
+4. 大量调整ReadME结构
+5. 添加亮度档位，现在背光调节范围更加广了
+6. 修复核显HDMI在2K外接分辨率下的兼容性问题（感谢Aris提供的方式）
+7. 尝试解决随机丢失声卡的问题
+8. 移除部分设备属性
+9. 屏蔽部分ACPITable以保证0ACPIError
+10. 添加安卓热点驱动
+11. 调整`SSDT`结构
+12. 今年6-8月份有机会可能考虑迁移到`OpenCore`
 
-当前支持 `macOS 10.15.4`
+当前支持 `macOS 10.15.4`补充更新**
 [往期更新](./ChangeLog.md)
 
-## 说明
+## 1. 说明
 
 **不要开启文件保险箱（FileVault）！！！开了就得重装！！！**
 **尤其是OTA更新系统的时候！！！更新完都看看窗口里是让你干嘛的！！！**
-1. 目前10.15.4没有问题，原则上ad0XX与ad1XX系列是通用，具体是否通用还需要进一步测试；
-2. 该配置是最早[daliansky](https://github.com/daliansky/)所写的，我对其进行了大量的更新；
-3. 如果你想使用FakeSMC，请将`CLOVER\Kext\Other`中所有带`SMC`字样的文件删掉，并`POST-Install/FakeSMC`中的所有`Kext`后缀文件放至`CLOVER\Kexts\Other`中，并将`POST-Install/FakeSMC`中`efi`后缀文件放至`CLOVER\drivers\UEFI`中，并删掉原先其中的`VirtualSMC.efi`。如果先前已经进入过系统，则还需重置`NVRAM`（Clover界面按`F11`即可），此外您可能还需要`BATC`布丁（`POST-Install\Battery`下的SSDT补丁放在`CLOVER\ACPI\patched`）；
-4. 显卡FakeID `56160000`，仿冒的`HD 620`，如果你遇到开机8苹果一闪而过的情况，可以尝试用`Clover Configurator`在显卡设置部分的`水平同步脉冲宽度`中填入100以解决这个问题；
-5. 亮度调节可用，原生亮度快捷键可用；按键大部分更接近百苹果的方式（这里专指CapsLock键，mac下是短按切换中英，长按是开启Capslock，可在`系统偏好设置`中修改）；
-6. 如果您有独显，并尝试驱动他，这边建议您直接放弃`Hackintosh`；
-7. 声卡LayoutID `03`，使用开机引导参数注入ID `03`，驱动的是底面的扬声器；
-8. 原生网卡Intel AC7265，暂时用不了，这里我用的网卡~~DW1820A~~ DW1560（只推荐这张，1820A问题很多，1830可能因大小问题不能安装），或者使用安卓热点开热点共享；
-9. 在`POST-Install\DisplayFile`中有我为AD1XX系列准备的显示文件，使用方式很简单，扔到`Clover\Kexts\Other`中就可以了。AD0XX系列请使用`Hackintool`自行生成，理论上可解决色深问题；
-10. 触控板使用的白果手势，但四指捏合和张开并不能使用，为驱动本身限制，~~似乎~~无解，其余手势都可以正常使用；
-11. 电池百分比正常，但可能提示立即维修，最近有时间我会定位问题所在；
-12. 如果您对SD卡口有刚需，请自备读卡器；
-13. 如果你爱好折腾，并觉得系统时不时会卡，这边建议换根固态比较好，这是原装固态的性能较差导致的；同样的可能会遇到睡眠或者关机会自动重启并弹出`您的电脑遇到问题重启`，这是因为原装固态Intel 600P对`macOS`兼容性有问题导致的，我上网查了在别的社区`Rehabman`评价过这个问题，基本无解，如果有解决方案欢迎PR。
-
+目前10.15没有问题，原则上ad0XX与ad1XX系列是通用，具体是否通用还需要进一步测试，该配置是最早[daliansky](https://github.com/daliansky/)所写，我对其进行了基本上相当于重写工作量的更新；
 
 ## 2. 安装
 
@@ -61,15 +52,80 @@
 8. 待第七步结束之后你的`CLOVER`中应该会出现一个`macOS`的选项，回车键进入就可以基本正常使用了~~，如果不能正常使用的话请参考问题部分2~~，恭喜你已经迈出进入macOS大门的第一脚！！！
 9. 请使用Clover Configurator或者其他什么工具都行，**注入自己的三码！！！注入自己的三码！！注入自己的三码！！！**，然后在`系统偏好设置-节能`中关掉**所有**`电能小憩`和`唤醒以供网络访问`的选项，然后基本上就算**大功告成**啦！！！
 
-## 3. 问题
+## 3. 定制
 
-1. 如果你尝试使用1820a，那么我祝你好运，但我本人因技术有限不再提供任何与1820a有关的技术支持，如果有需要，请移步[小兵的blog](https://blog.daliansky.net)查看对应问题的解决方案。
-2. 全套配置已经由我本人亲自调试，并没有过多问题，安装按照上文提到的教程就不会有差错。如果还是不行，你可以问一下你的电脑为什么不行；
-3. ~~目前PS2驱动存在大写灯不正常/禁用触控板有可能打不开的情况，大家先将就一下，等等VoodooPS2项目更新；~~大写灯现在正常了；
-4. 如果在使用过程中出现颜色断层，请看说明第9条；
-5. 如果有什么改进或者其他建议欢迎PR。
+进行本部分操作需要一定的黑苹果基础，如果你没有，请不要贸然尝试所有标记`无需`的部分
 
-## 4.写在最后
+### 1. 显示
+
+如果你是1080P用户，请注意以下几点：
+1. （非必须）使用[xzhih/one-key-hidpi](https://github.com/xzhih/one-key-hidpi)项目提供的方式开启HiDPI；
+
+如果你是4K用户，请注意以下几点：
+1. 使用`Clover Configurator`修改`CLOVER\Config.plist`中`启动背景`部分`登陆画面缩放`为`2`、`变量状态`为`1`、`UI比例`为`2`，保存并退出；
+2. 使用`Clover Configurator`修改`CLOVER\Config.plist`中`引导界面`部分`主题`部分填写`Outline4K`；
+
+如果你的显示器显示色深（色彩有明显断层），请尝试使用`Hackintool`定制`Display`。AD1系列1080P可尝试在`POST-Install\DisplayFile`中我准备的显示文件，使用方式很简单，扔到`Clover\Kexts\Other`中就可以了。AD0系列如遇到此问题使用`Clover Configurator`修改`CLOVER\config.plist`中`设备设置`-`属性`-`PciRoot(0x0)/Pci(0x2,0x0)`中所有`16590000`或`00001659`无差别修改成`16190000`或`00001619`，保存并重启电脑以查看效果。
+如果你遇到开机第二阶段苹果闪烁出现8个并迅速恢复正常的情况，可以尝试用`Clover Configurator`在`显卡设置`部分的`水平同步脉冲宽度`中填入100以解决这个问题；
+如果你两边有一侧（应该是左侧）的Type-C口不能外接显示，请降级Bios至F18。
+
+### 2. CPU变频
+
+如果你是非i5-8250U用户，请注意以下几点：
+1. （必须）确保你现在已经安装好并进入`macOS`了；
+2. （必须）删除项目中`CLOVER\Kexts\Other\CPUFriendDataProvider.kext`;
+3. （必须）使用[stevezhengshiqi/one-key-cpufriend](https://github.com/stevezhengshiqi/one-key-cpufriend/blob/master/README_CN.md)提供的方式生成新的`CPUFriendDataProvider.kext`并放至`CLOVER\Kexts\Other`;
+
+如果持续性能表现不好，请确保你BIOS版本为F29。
+
+### 3.背光（无需）
+
+当前背光档位已经写死，且问题不大，无需修改。但如果你对当前背光档位心存不满，请修改`CLOVER\ACPI\patched\SSDT-BRT6.dsl`中`PNLF`设备的`_BCL`方法。第一位和最后一位都是最大亮度（最好不要修改这个值比1388大），第二位和第三位都是最小亮度，中间的4-18位自由发挥即可（均为10进制），修改好后保存并编译为`SSDT-BRT6.aml`，重启即可见效。
+
+### 4. 独显（MX150）和SD卡
+
+都驱动不了，死心吧。如果你执意驱动，建议你放弃`Hackintosh`。
+SD卡重度患者请使用读卡器。
+
+### 5. 扬声器
+
+当前驱动的扬声器为底面的扬声器，因为ENVY节点问题四扬声器可能不能同时进行输出。如果有好的解决办法欢迎PR。如果想要尝试C面扬声器，需使用`Clover Configurator`修改`CLOVER\config.plist`中`设备设置`-`属性`-`PciRoot(0x0)/Pci(0x14,0x3)`中`layout-id`部分修改为`1C0000000`。
+
+### 6. 网卡
+
+网卡部分其实对于`macOS`没什么好说的，原生网卡`Intel AC7265`，暂时用不了，这里我用的网卡DW1560（只推荐这张，1820A几乎不可用，1830可能因大小问题不能安装），或者使用安卓热点开热点共享；
+如果你使用的是`DW1560`，在使用`Windows`时不要安装DELL官网提供的驱动，请使用通过`Windows更新`获取最新的网卡驱动，蓝牙部分驱动则无所谓；
+如果你尝试使用`DW1820a`，那么我祝你好运，但我本人因技术有限不再提供任何与`DW1820a`有关的技术支持，如果有需要，请移步[小兵的blog](https://blog.daliansky.net)查看对应问题的解决方案。
+
+### 7. 硬盘
+
+如果你爱好折腾，并觉得系统时不时会卡，建议换根固态，这是原装固态的性能与对`macOS`兼容差导致的；同样的可能会遇到睡眠或者关机会自动重启并弹出`您的电脑遇到问题重启`，这是因为原装Intel固态对`macOS`兼容性有问题导致的，我上网查了在别的社区`Rehabman`评价过这个问题，基本无解，如果有解决方案欢迎PR。
+
+### 8. SMC（无需）
+
+项目中默认使用的是VirtualSMC，由[Acidanthera](https://github.com/acidanthera)维护，目前效果很好，如无必要无需替换。但如果有调试需要，仍可尝试由[Clover团队](https://github.com/CloverHackyColor)维护的FakeSMC，所需文件均在`POST-Install/FakeSMC`中。
+
+| 序号 | 路径 | 删除| 添加 |
+| :---: | :--- | :--- | :--- |
+| 1 | `CLOVER\Kext\Other` | 原先所有带SMC字样的Kext文件（夹） | `POST-Install/FakeSMC`中所有`Kext`文件（夹） |
+| 2 | `CLOVER\drivers\UEFI` | VirtualSMC.efi | SMCHelper.efi |
+
+如果先前已经使用`VirtualSMC`进入过系统，则还需重置`NVRAM`（Clover界面按`F11`即可）。
+
+### 9. 电池（无需）
+
+电池百分比读数使用`VirtualSMC`及其组件实现，无需修改。但如果想使用`FakeSMC`或者认为电池读数有明显严重问题可使用定制SSDT的方法，所需文件均在`POST-Install/Battery`中。将其中的`SSDT-BAT0.aml`移至`CLOVER\ACPI\patched`中，并在`CLOVER\config.plist`中的`SortedOrder`部分按照模式添加行`SSDT-BAT0.aml`
+
+### 10. 触控板（无需）
+
+触控板使用由[Acidanthera](https://github.com/acidanthera)所维护的`VoodooPS2`项目驱动，已经是支持白果手势支持的最好的驱动了。如果有需要请自行寻找并替换`ApplePS2SmartTouchPad`驱动或者最开始由[Rehabman](https://bitbucket.org/%7Be26fb9ce-5cc2-4e36-8576-7a8faae8e194%7D/)维护的`VoodooPS2`驱动。
+
+## 4. 问题
+
+1. 全套配置已经由我本人亲自调试，并没有过多问题，安装按照上文提到的教程就不会有差错。如果还是不行，你可以问一下你的电脑为什么不行；
+2. 如果有什么改进或者其他建议欢迎PR。
+
+## 5.写在最后
 
 
 我是`XPS 15 9560`用户，这个配置写下来最主要还是为了我女朋友，`ENVY 13 ad1XX`是她的电脑，执笔时她刚刚买了一台`iPad Air 3`，本着折腾的精神以及更好的体验苹果生态，我决定为她做这么一份引导，驱动的更新不会太差，但是可能很多情况下对问题的修复会有些不及时。<br />
@@ -80,7 +136,11 @@
 
 2020-02-24续<br />
 
-基本上我已经把能填的坑都填了，oc暂无计划但难度不大，迁移的话其实很简单，但短期内没有计划，所以项目会进入大概半年的维护期。仅更新驱动但问题修复会延期。（原则上讲也没什么问题了）
+基本上我已经把能填的坑都填了，oc暂无计划但难度不大，迁移的话其实很简单，但短期内没有计划，所以项目会进入大概半年的维护期。仅更新驱动但问题修复会延期。（原则上讲也没什么问题了）<br />
+
+2020-04-11 续<br />
+
+Hotpatch补丁基本已经趋近于完善了，Error该修的都修了，改做操作系统判断的也都做了，基本上这套Hotpatch转OC是没有什么大的问题的。
 
 ## 鸣谢
 

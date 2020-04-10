@@ -10,22 +10,25 @@
 | Board | HP 83A8 |
 | CPU | Intel Core i5-8250U |
 | GPU | Intel Graphics UHD 620 |
-| Audio | Realtec ALC298 |
+| Audio | Realtec ALC295 |
 | Network | Dell Wireless ~~1820a~~ 1560 |
 | Storage | ~~Intel 600P 360G~~ WD SN750 |
 
 ## 更新日志
-### 2020-04-05
+### 2020-04-11
 
 1. 更新`Lilu`系驱动至最新版
-2. 更新`Clover`至5108
+2. 更新`Clover`至5109
 3. 使用`VirtualSMC`方案实现电池补丁
-4. 添加亮度档位，现在背光调节范围更加广了
-5. 修复核显HDMI在2K外接分辨率下的兼容性问题（感谢Aris提供的方式）
-6. 尝试解决随机丢失声卡的问题
-7. 添加安卓热点驱动
-8. 调整`SSDT`结构
-9. 今年6-8月份有机会可能考虑迁移到`OpenCore`
+4. 大量调整ReadME结构
+5. 添加亮度档位，现在背光调节范围更加广了
+6. 修复核显HDMI在2K外接分辨率下的兼容性问题（感谢Aris提供的方式）
+7. 尝试解决随机丢失声卡的问题
+8. 移除部分设备属性
+9. 屏蔽部分ACPITable以保证0ACPIError
+10. 添加安卓热点驱动
+11. 调整`SSDT`结构
+12. 今年6-8月份有机会可能考虑迁移到`OpenCore`
 
 ### 2020-02-24
 
