@@ -17,16 +17,6 @@
 			<array>
 				<dict>
 					<key>Comment</key>
-					<string>Change OSID to IDOS (avoid against _OSI to XOSI)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>T1NJRA==</data>
-					<key>Replace</key>
-					<data>SURPUw==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>Change _OSI to XOSI (OS Identify)</string>
 					<key>Disabled</key>
 					<false/>
@@ -47,13 +37,13 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>Change H_EC to EC (USB Embedded Control)</string>
+					<string>Change _Q13 to XQ13 (Bright Function Key)</string>
 					<key>Disabled</key>
 					<false/>
 					<key>Find</key>
-					<data>SF9FQw==</data>
+					<data>X1ExMw==</data>
 					<key>Replace</key>
-					<data>RUNfXw==</data>
+					<data>WFExMw==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -64,16 +54,6 @@
 					<data>R1BSVwI=</data>
 					<key>Replace</key>
 					<data>WFBSVwI=</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>Change _Q13 to XQ13 (Bright Function Key)</string>
-					<key>Disabled</key>
-					<false/>
-					<key>Find</key>
-					<data>X1ExMw==</data>
-					<key>Replace</key>
-					<data>WFExMw==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -202,16 +182,10 @@
 				<string>SLIC</string>
 			</dict>
 			<dict>
+				<key>Length</key>
+				<integer>1380</integer>
 				<key>Signature</key>
 				<string>SSDT</string>
-				<key>TableId</key>
-				<string>Cpu0Ist</string>
-			</dict>
-			<dict>
-				<key>Signature</key>
-				<string>SSDT</string>
-				<key>TableId</key>
-				<string>xh_rvp10</string>
 			</dict>
 			<dict>
 				<key>Signature</key>
@@ -237,8 +211,6 @@
 	<dict>
 		<key>Arguments</key>
 		<string>-lilubetaall slide=0 -igfxhdmidivs gfxrst=1 nv_disable=1 brcmfx-country=#a bpr_probedelay=100 bpr_initialdelay=300 bpr_postresetdelay=300</string>
-		<key>CustomLogo</key>
-		<string>Apple</string>
 		<key>Debug</key>
 		<false/>
 		<key>DefaultVolume</key>
@@ -254,136 +226,6 @@
 	<dict>
 		<key>Properties</key>
 		<dict>
-			<key>PciRoot(0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Host bridge</string>
-				<key>model</key>
-				<string>Xeon E3-1200 v6/7th Gen Core Processor Host Bridge/DRAM Registers</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>USB controller</string>
-				<key>model</key>
-				<string>Sunrise Point-LP USB 3.0 xHCI Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x14,0x2)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Signal processing controller</string>
-				<key>model</key>
-				<string>Sunrise Point-LP Thermal subsystem</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x15,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Signal processing controller</string>
-				<key>model</key>
-				<string>Sunrise Point-LP Serial IO I2C Controller #0</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x16,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Communication controller</string>
-				<key>model</key>
-				<string>Sunrise Point-LP CSME HECI #1</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x17,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>SATA controller</string>
-				<key>model</key>
-				<string>Sunrise Point-LP SATA Controller [AHCI mode]</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Sunrise Point-LP PCI Express Root Port #5</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>ExpressCard</string>
-				<key>model</key>
-				<string>AU6625 PCI-E Flash card reader controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x5)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Sunrise Point-LP PCI Express Root Port #6</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1C,0x5)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>built-in</key>
-				<integer>1</integer>
-				<key>device_type</key>
-				<string>Network controller</string>
-				<key>model</key>
-				<string>BCM4352 802.11ac Wireless Network Adapter</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1D,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>PCI bridge</string>
-				<key>model</key>
-				<string>Sunrise Point-LP PCI Express Root Port #9</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1D,0x0)/Pci(0x0,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>built-in</key>
-				<integer>1</integer>
-				<key>device_type</key>
-				<string>Non-Volatile memory controller</string>
-				<key>model</key>
-				<string>WD Black 2018/PC SN720 NVMe SSD</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>ISA bridge</string>
-				<key>model</key>
-				<string>Sunrise Point LPC Controller/eSPI Controller</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x2)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Memory controller</string>
-				<key>model</key>
-				<string>Sunrise Point-LP PMC</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x1F,0x3)</key>
 			<dict>
 				<key>AAPL,slot-name</key>
@@ -399,15 +241,6 @@
 				<key>model</key>
 				<string>CM238 HD Audio Controller</string>
 			</dict>
-			<key>PciRoot(0x0)/Pci(0x1F,0x4)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>SMBus</string>
-				<key>model</key>
-				<string>Sunrise Point-LP SMBus</string>
-			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,GfxYTile</key>
@@ -415,7 +248,7 @@
 				<key>AAPL,ig-platform-id</key>
 				<data>AAAWWQ==</data>
 				<key>AAPL,slot-name</key>
-				<string>Internal@0,2,0</string>
+				<string>Built In</string>
 				<key>device-id</key>
 				<data>FlkAAA==</data>
 				<key>device_type</key>
@@ -436,28 +269,8 @@
 				<data>AAAwAQ==</data>
 				<key>framebuffer-unifiedmem</key>
 				<data>AAAAwA==</data>
-				<key>hda-gfx</key>
-				<string>onboard-1</string>
 				<key>model</key>
 				<string>Intel UHD Graphics 620</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x4,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>Signal processing controller</string>
-				<key>model</key>
-				<string>Xeon E3-1200 v5/E3-1500 v5/6th Gen Core Processor Thermal Subsystem</string>
-			</dict>
-			<key>PciRoot(0x0)/Pci(0x8,0x0)</key>
-			<dict>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
-				<key>device_type</key>
-				<string>System peripheral</string>
-				<key>model</key>
-				<string>Xeon E3-1200 v5/v6 / E3-1500 v5 / 6th/7th/8th Gen Core Processor Gaussian Mixture Model</string>
 			</dict>
 		</dict>
 		<key>SetIntelBacklight</key>
@@ -477,16 +290,12 @@
 			<key>Entries</key>
 			<array>
 				<dict>
-					<key>CustomLogo</key>
-					<string>Theme</string>
 					<key>Disabled</key>
 					<false/>
 					<key>FullTitle</key>
 					<string>macOS</string>
 					<key>Ignore</key>
 					<false/>
-					<key>Image</key>
-					<string>yos</string>
 					<key>InjectKexts</key>
 					<true/>
 					<key>NoCaches</key>
@@ -505,8 +314,6 @@
 					<string>Windows</string>
 					<key>Ignore</key>
 					<false/>
-					<key>Image</key>
-					<string>vista</string>
 					<key>Path</key>
 					<string>\EFI\Microsoft\Boot\bootmgfw.efi</string>
 					<key>Type</key>
