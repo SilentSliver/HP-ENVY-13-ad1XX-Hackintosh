@@ -3,9 +3,6 @@
 *Rename: _Q13 to XQ13
 *Find:5F513133
 *Replace:58513133
-*Rename:H_EC to EC__
-*Find:485F4543
-*Replace:45435F5F
 */
 DefinitionBlock ("", "SSDT", 2, "hack", "BRT6", 0x00000000)
 {
@@ -14,12 +11,12 @@ DefinitionBlock ("", "SSDT", 2, "hack", "BRT6", 0x00000000)
     External (_SB.PCI0.GFX0.DD1F._BCM, MethodObj)
     External (_SB.PCI0.GFX0.DD1F._BQC, MethodObj)
     External (_SB.PCI0.GFX0._DOS, MethodObj)
-    External (_SB_.PCI0.LPCB.EC__, DeviceObj)
+    External (_SB_.PCI0.LPCB.H_EC, DeviceObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
-    External (_SB_.PCI0.LPCB.EC__.XQ13, MethodObj)
+    External (_SB_.PCI0.LPCB.H_EC.XQ13, MethodObj)
     External (HKNO, FieldUnitObj)
     //Bright Function Key Inject
-    Scope (_SB.PCI0.LPCB.EC)
+    Scope (_SB.PCI0.LPCB.H_EC)
     {
         Method (_Q13, 0, Serialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
@@ -41,7 +38,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "BRT6", 0x00000000)
             }
             Else
             {
-                 \_SB.PCI0.LPCB.EC.XQ13 ()
+                 \_SB.PCI0.LPCB.H_EC.XQ13 ()
             }
         }
     }
@@ -67,25 +64,25 @@ DefinitionBlock ("", "SSDT", 2, "hack", "BRT6", 0x00000000)
             {
                 Return (Package (0x13)
                 {
-                    0x056C, 
-                    0xFC, 
-                    Zero, 
-                    0x18, 
-                    0x27, 
-                    0x3A, 
-                    0x52, 
-                    0x71, 
-                    0x96, 
-                    0xC4, 
-                    0xFC, 
-                    0x0140, 
-                    0x0193, 
-                    0x01F6, 
-                    0x026E, 
-                    0x02FE, 
-                    0x03AA, 
-                    0x0478, 
-                    0x056C
+                    1388, 
+                    252, 
+                    0, 
+                    24, 
+                    39, 
+                    58, 
+                    82, 
+                    113, 
+                    150, 
+                    196, 
+                    252, 
+                    320, 
+                    403, 
+                    502, 
+                    622, 
+                    766, 
+                    938, 
+                    1144, 
+                    1388
                 })
             }
             Method (_DOS, 1, NotSerialized)
