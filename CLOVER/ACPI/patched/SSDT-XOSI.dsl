@@ -1,17 +1,12 @@
 //
 // Override OS Identify Method
 // Rename in Config:
-// OSID to XSID
-// Find:     4F534944
-// Replace:  58534944
-// TgtBridge:no
-//
 // _OSI to XOSI
 // Find:     5F4F5349
 // Replace:  584F5349
 //
 
-DefinitionBlock("", "SSDT", 2, "DXPS", "XOSI", 0)
+DefinitionBlock("", "SSDT", 2, "HPENVY", "XOSI", 0)
 {
     Method(XOSI, 1)
     {

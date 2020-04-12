@@ -1,6 +1,6 @@
 // PCI DeviceInject
 
-DefinitionBlock ("", "SSDT", 2, "DXPS", "PCID", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "HPENVY", "PCID", 0x00000000)
 {
     // DMAC and PMCR
     External (_SB_.PCI0.LPCB, DeviceObj)
@@ -72,10 +72,7 @@ DefinitionBlock ("", "SSDT", 2, "DXPS", "PCID", 0x00000000)
                 {
                     Return (0x0B)
                 }
-                Else
-                {
-                    Return (Zero)
-                }
+                Return (Zero)
             }
         }
     }
@@ -100,44 +97,44 @@ DefinitionBlock ("", "SSDT", 2, "DXPS", "PCID", 0x00000000)
         }
         Scope (SBUS)
         {
-        Device (BUS0)
-        {
-            Name (_CID, "smbus")
-            Name (_ADR, Zero)
-            Device (DVL0)
+            Device (BUS0)
             {
-                Name (_ADR, 0x57)
-                Name (_CID, "diagsvault")
-                Method (_DSM, 4, NotSerialized)
+                Name (_CID, "smbus")
+                Name (_ADR, Zero)
+                Device (DVL0)
                 {
-                    If (!Arg2)
+                    Name (_ADR, 0x57)
+                    Name (_CID, "diagsvault")
+                    Method (_DSM, 4, NotSerialized)
                     {
-                        Return (Buffer (One)
+                        If (!Arg2)
                         {
-                             0x03
-                        })
-                    }
+                            Return (Buffer (One)
+                            {
+                                 0x03
+                            })
+                        }
 
-                    Return (Package (0x02)
-                    {
+                        Return (Package (0x02)
+                        {
                         "address", 
                         0x57
-                    })
+                        })
+                    }
                 }
-            }
-            Method (_STA, 0, NotSerialized)
-            {
-                If (_OSI ("Darwin"))
+                Method (_STA, 0, NotSerialized)
                 {
-                    Return (0x0F)
-                }
-                Else
-                {
-                    Return (Zero)
+                    If (_OSI ("Darwin"))
+                    {
+                        Return (0x0F)
+                    }
+                    Else
+                    {
+                        Return (Zero)
+                    }
                 }
             }
         }
-    }
     }
 }
 

@@ -4,7 +4,7 @@
 *Find:5F513133
 *Replace:58513133
 */
-DefinitionBlock ("", "SSDT", 2, "hack", "BRT6", 0x00000000)
+DefinitionBlock ("", "SSDT", 2, "HPENVY", "BRT6", 0x00000000)
 {
     External (_SB.PCI0.GFX0, DeviceObj)
     External (_SB.PCI0.GFX0.DD1F._BCL, MethodObj)
@@ -51,15 +51,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "BRT6", 0x00000000)
             Name (_HID, EisaId ("APP0002"))
             Name (_CID, "backlight")
             Name (_UID, 16)
-            // _BCM/_BQC: set/get for brightness level
-            Method (_BCM, 1, NotSerialized)
-            {
-                \_SB.PCI0.GFX0.DD1F._BCM(Arg0)
-            }
-            Method (_BQC, 0, NotSerialized)
-            {
-                Return(\_SB.PCI0.GFX0.DD1F._BQC())
-            }
             Method (_BCL, 0, NotSerialized)
             {
                 Return (Package (0x13)
@@ -84,40 +75,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "BRT6", 0x00000000)
                     1144, 
                     1388
                 })
-            }
-            Method (_DOS, 1, NotSerialized)
-            {
-                \_SB.PCI0.GFX0._DOS(Arg0)
-            }
-            // extended _BCM/_BQC for setting "in between" levels
-            Method (XBCM, 1, NotSerialized)
-            {
-                // Update backlight via existing DSDT methods
-                \_SB.PCI0.GFX0.DD1F._BCM(Arg0)
-            }
-            Method (XBQC, 0, NotSerialized)
-            {
-                Return(\_SB.PCI0.GFX0.DD1F._BQC())
-            }
-            // Use XOPT=1 to disable smooth transitions
-            Name (XOPT, Zero)
-            // XRGL/XRGH: defines the valid range
-            Method (XRGL, 0, NotSerialized)
-            {
-                Store(_BCL(), Local0)
-                Store(DerefOf(Index(Local0, 2)), Local0)
-                Return(Local0)
-            }
-            Method (XRGH, 0, NotSerialized)
-            {
-                Store(_BCL(), Local0)
-                Store(DerefOf(Index(Local0, Subtract(SizeOf(Local0), 1))), Local0)
-                Return(Local0)
-            }
-            Method (_INI, 0, NotSerialized)
-            {
-                //XRGL()
-                //XRGH()
             }
             Method (_STA, 0, NotSerialized)
             {
