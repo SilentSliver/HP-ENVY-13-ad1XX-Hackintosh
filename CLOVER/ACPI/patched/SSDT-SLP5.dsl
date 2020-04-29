@@ -1,48 +1,58 @@
 // Fix All Sleep Issus
 DefinitionBlock ("", "SSDT", 2, "HPENVY", "SLP5", 0x00000000)
 {
-    External (RMDC.DOFF, MethodObj)
-    External (RMDC.DON, MethodObj)
+    External (H2OP, MethodObj)
     External (ZPTS, MethodObj)
     External (ZWAK, MethodObj)
-
-    Device (SLPC)
-    {
-        Name (_ADR, 0)
-        Name (DPTS, 1)
-    }
+    External (S5WL, FieldUnitObj)
+    External (RMDC.DGOF, MethodObj)
+    External (_SB_.PCI0.LPCB.H_EC.LWKE, FieldUnitObj)
     
-    Method (_PTS, 1, NotSerialized) //Method (_PTS, 1, Serialized)
+    If (_OSI ("Darwin"))
     {
-        // Avoid Wake up black screen with DGPU
-        If (_OSI ("Darwin"))
+        Device (SLPC)
         {
-            If (CondRefOf (\SLPC.DPTS)||CondRefOf (\RMDC.DON))
+            Name (_ADR, 0)
+            Name (DIDE, 0)
+            Name (DPTS, 1)
+            Method (_STA, 0)  // _STA: Status
             {
-                \RMDC.DON()
+                Return (0x0F)
             }
         }
-
+    }
+    
+    Method (_PTS, 1)
+    {
         ZPTS(Arg0)
-    }
-    
-    Method (_WAK, 1, NotSerialized) //Method (_WAK, 1, Serialized)
-    {   
-        
-        If (_OSI ("Darwin"))
+        If ((Arg0 == 0x05))
         {
-            If (CondRefOf (\SLPC.DPTS)||CondRefOf (\RMDC.DOFF))
+            If (_OSI ("Darwin"))
             {
-                \RMDC.DOFF()
+                H2OP (0xE5)
+                If (S5WL)
+                {
+                    \_SB.PCI0.LPCB.H_EC.LWKE = 0
+                }
             }
         }
-
+    }
+    
+    Method (_WAK, 1, Serialized) 
+    {   
         Local0 = ZWAK(Arg0)
+        If (_OSI ("Darwin"))
+        {
+            If (CondRefOf (\SLPC.DPTS)&& CondRefOf (\RMDC.DOFF))
+            {
+                \RMDC.DGOF()
+            }
+        }
         Return (Local0)
     }
     
     External(XPRW, MethodObj)
-    Method (GPRW, 2, NotSerialized)
+    Method (GPRW, 2)
     {
         If (_OSI ("Darwin"))
         {
@@ -65,6 +75,35 @@ DefinitionBlock ("", "SSDT", 2, "HPENVY", "SLP5", 0x00000000)
             }
         }
         Return (XPRW (Arg0, Arg1))
+    }
+    
+    If ((\SLPC.DIDE == 1))
+    {
+
+        Scope (\_SB)
+        {
+            Method (LPS0, 0)
+            {
+                Return (1)
+            }
+        }
+
+        Scope (\_GPE)
+        {
+            Method (LXEN, 0)
+            {
+                Return (1)
+            }
+        }
+
+        Scope (\)
+        {
+            Name (SLTP, 0)
+            Method (_TTS, 1)  // _TTS: Transition To State
+            {
+            SLTP = Arg0
+            }
+        }
     }
 }
 
