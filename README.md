@@ -7,7 +7,7 @@
 
 | Specs | Detail | Specs | Detail |
 | :---: | :--- | :---: | :--- |
-| Board | HP 83A8 | RAM | 8GBx1 |
+| Board | HP 83A8 | Platform | Clover Or Opencore Tested |
 | CPU | Intel Core i5-8250U | Display | BOE070E |
 | GPU | Intel Graphics UHD 620 | Shared VRAM | 128M |
 | Audio | Realtec ALC295 | SMC | VirtualSMC |
@@ -16,9 +16,10 @@
 
 ## 上次更新
 
-### 2020-04-29
+### 2020-05-05
 
-1. 更新`Clover`至5114
+1. 更新`Clover`至5115
+2. 添加`OpenCore`分支
 
 当前支持 `macOS 10.15.4`补充更新**
 [往期更新](./ChangeLog.md)
@@ -107,7 +108,7 @@ SD卡重度患者请使用读卡器。
 
 ### 10. 触控板（无需）
 
-触控板使用由[Acidanthera](https://github.com/acidanthera)所维护的`VoodooPS2`项目驱动，已经是支持白果手势支持的最好的驱动了。如果有需要请自行寻找并替换`ApplePS2SmartTouchPad`驱动或者最开始由[Rehabman](https://bitbucket.org/%7Be26fb9ce-5cc2-4e36-8576-7a8faae8e194%7D/)维护的`VoodooPS2`驱动。
+触控板使用由[Acidanthera](https://github.com/acidanthera)所维护的`VoodooPS2`项目驱动，已经是支持白果手势支持的最好的`PS2触控板`驱动了。如果有需要请自行寻找并替换`ApplePS2SmartTouchPad`驱动或者最开始由[Rehabman](https://bitbucket.org/%7Be26fb9ce-5cc2-4e36-8576-7a8faae8e194%7D/)维护的`VoodooPS2`驱动。
 
 ## 4. 问题
 
@@ -130,6 +131,10 @@ SD卡重度患者请使用读卡器。
 2020-04-11 续<br />
 
 Hotpatch补丁基本已经趋近于完善了，Error该修的都修了，改做操作系统判断的也都做了，基本上这套Hotpatch转OC是没有什么大的问题的。
+
+2020-05-05 续<br />
+
+OC坑已填，剩下一个月不更新，抓紧补论文。
 
 ## 鸣谢
 
