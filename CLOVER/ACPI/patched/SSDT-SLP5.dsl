@@ -25,16 +25,9 @@ DefinitionBlock ("", "SSDT", 2, "HPENVY", "SLP5", 0x00000000)
     Method (_PTS, 1)
     {
         ZPTS(Arg0)
-        If ((Arg0 == 0x05))
+        If (_OSI ("Darwin")&&(Arg0 == 0x05)&&S5WL)
         {
-            If (_OSI ("Darwin"))
-            {
-                H2OP (0xE5)
-                If (S5WL)
-                {
-                    \_SB.PCI0.LPCB.H_EC.LWKE = 0
-                }
-            }
+            \_SB.PCI0.LPCB.H_EC.LWKE = 0
         }
     }
     
@@ -77,7 +70,7 @@ DefinitionBlock ("", "SSDT", 2, "HPENVY", "SLP5", 0x00000000)
         Return (XPRW (Arg0, Arg1))
     }
     
-    If ((\SLPC.DIDE == 1))
+    If (_OSI ("Darwin")&&(\SLPC.DIDE == 1))
     {
 
         Scope (\_SB)
@@ -101,7 +94,7 @@ DefinitionBlock ("", "SSDT", 2, "HPENVY", "SLP5", 0x00000000)
             Name (SLTP, 0)
             Method (_TTS, 1)  // _TTS: Transition To State
             {
-            SLTP = Arg0
+                SLTP = Arg0
             }
         }
     }
