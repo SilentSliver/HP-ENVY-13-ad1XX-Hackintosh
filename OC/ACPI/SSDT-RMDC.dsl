@@ -49,10 +49,7 @@ DefinitionBlock ("", "SSDT", 2, "HPENVY", "RMDC", 0x00000000)
             {
                 Return (0x00)
             }
-            Else
-            {
-                Return (\_SB.PCI0.I2C0.XSTA ())
-            }   
+            Return (\_SB.PCI0.I2C0.XSTA ())
         }
     }
 
@@ -65,10 +62,7 @@ DefinitionBlock ("", "SSDT", 2, "HPENVY", "RMDC", 0x00000000)
             {
                 Return (0x00)
             }
-            Else
-            {
-                Return (\_SB.PCI0.I2C1.XSTA ())
-            }   
+            Return (\_SB.PCI0.I2C1.XSTA ()) 
         }
     }
 }

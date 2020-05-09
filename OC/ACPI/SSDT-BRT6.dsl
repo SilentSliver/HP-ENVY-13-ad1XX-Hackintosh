@@ -6,11 +6,6 @@
 */
 DefinitionBlock ("", "SSDT", 2, "HPENVY", "BRT6", 0x00000000)
 {
-    External (_SB.PCI0.GFX0, DeviceObj)
-    External (_SB.PCI0.GFX0.DD1F._BCL, MethodObj)
-    External (_SB.PCI0.GFX0.DD1F._BCM, MethodObj)
-    External (_SB.PCI0.GFX0.DD1F._BQC, MethodObj)
-    External (_SB.PCI0.GFX0._DOS, MethodObj)
     External (_SB_.PCI0.LPCB.H_EC, DeviceObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
     External (_SB_.PCI0.LPCB.H_EC.XQ13, MethodObj)
