@@ -71,7 +71,7 @@ Please make sure you are using the latest bios if you think your hackintosh has 
 
 ### 3.BackLight（Not Need）
 
-The Backlight Level has been customized and no modification required. If you still need adjust backlight level, please edit Method `_BCL` from Device `PNLF` in `CLOVER\ACPI\patched\SSDT-BRT6.dsl`. Method `_BCL` returns a Package with 19 numbers, then the first and the last one are maximum level (and it's not a good idea to change these two number). The second one controls the backlight level which will be used when macOS is going to sleep. a中间的4-18位自由发挥即可（均为10进制），修改好后保存并编译为`SSDT-BRT6.aml`，重启即可见效。
+The Backlight Level has been customized and no modification required. If you still need adjust backlight level, please edit Method `_BCL` from Device `PNLF` in `CLOVER\ACPI\patched\SSDT-BRT6.dsl`. Method `_BCL` returns a Package with 19 numbers, then the first and the last one are maximum level (and it's not a good idea to change these two number). The second one controls the backlight level which will be used when macOS is going to sleep. 中间的4-18位自由发挥即可（均为10进制），修改好后保存并编译为`SSDT-BRT6.aml`，重启即可见效。
 
 ### 4. Discrete Graphic（MX150）and SD Card reader
 
@@ -89,10 +89,9 @@ Impossible for now.
 
 ### 7. Hard Drive
 
-如果你爱好折腾，并觉得系统时不时会卡，建议换根固态，这是原装固态的性能与对`macOS`兼容差导致的；同样的可能会遇到睡眠或者关机会自动重启并弹出`您的电脑遇到问题重启`，这是因为原装Intel固态对`macOS`兼容性有问题导致的，我上网查了在别的社区`Rehabman`评价过这个问题，基本无解，如果有解决方案欢迎PR。
-Due to Hp, the SSD
+Due to HP, the SSD works not very perfect. I have tried to fix it but I failed. I suggest using other high performance SSD. 
 
-### 8. SMC（Not Need）
+### 8. SMC(Not Need)
 
 项目中默认使用的是VirtualSMC，由[Acidanthera](https://github.com/acidanthera)维护，目前效果很好，如无必要无需替换。但如果有调试需要，仍可尝试由[Clover团队](https://github.com/CloverHackyColor)维护的FakeSMC，所需文件均在`POST-Install/FakeSMC`中。
 
@@ -103,47 +102,35 @@ Due to Hp, the SSD
 
 如果先前已经使用`VirtualSMC`进入过系统，则还需重置`NVRAM`（Clover界面按`F11`即可）。
 
-### 9. Battery（无需）
+### 9. Battery(Not Need)
 
 电池百分比读数使用`VirtualSMC`及其组件实现，无需修改。但如果想使用`FakeSMC`或者认为电池读数有明显严重问题可使用定制SSDT的方法，所需文件均在`POST-Install/Battery`中。将其中的`SSDT-BAT0.aml`移至`CLOVER\ACPI\patched`中，并在`CLOVER\config.plist`中的`SortedOrder`部分按照模式添加行`SSDT-BAT0.aml`
 
-### 10. Trackpad（无需）
+### 10. Trackpad(Not Need)
 
-触控板使用由[Acidanthera](https://github.com/acidanthera)所维护的`VoodooPS2`项目驱动，已经是支持白果手势支持的最好的`PS2触控板`驱动了。如果有需要请自行寻找并替换`ApplePS2SmartTouchPad`驱动或者最开始由[Rehabman](https://bitbucket.org/%7Be26fb9ce-5cc2-4e36-8576-7a8faae8e194%7D/)维护的`VoodooPS2`驱动。
+Trackpad Kext comes from [Acidanthera](https://github.com/acidanthera), and it's the best `ps2 trackpad` kext in hackintosh I think. If you need, you can replace it to `ApplePS2SmartTouchPad`or the [Rehabman](https://bitbucket.org/%7Be26fb9ce-5cc2-4e36-8576-7a8faae8e194%7D/) version.
 
 ## 4. Issues
 
-1. 全套配置已经由我本人亲自调试，并没有过多问题，安装按照上文提到的教程就不会有差错。如果还是不行，你可以问一下你的电脑为什么不行；
-2. 如果有什么改进或者其他建议欢迎PR。
+1. All things except external display have been tested；
+2. If you find some issues or bugs, Please PR.
 
 ## 5. And more... 
 
-
-我是`XPS 15 9560`用户，这个配置写下来最主要还是为了我女朋友，`ENVY 13 ad1XX`是她的电脑，执笔时她刚刚买了一台`iPad Air 3`，本着折腾的精神以及更好的体验苹果生态，我决定为她做这么一份引导，驱动的更新不会太差，但是可能很多情况下对问题的修复会有些不及时。<br />
+`ENVY 13 ad1XX` is my girlfriend's pc. She bought a `iPad Air 3` before I made this configuration(Yes, for her). I will update `Kexts` but for some issues and bugs will need some time. <br />
 
 2020-01-11续<br />
 
 这台机子奉劝大家千万不要用1820A，按照小兵的方法，原则上是不能驱动的，但是可以通过固件保留的方式（启动Windows后重启到Mac）使用网卡，但代价是不能睡眠，一睡网卡必定掉，整个系统直接卡死。
 
-2020-02-24续<br />
+## Thanks
 
-基本上我已经把能填的坑都填了，oc暂无计划但难度不大，迁移的话其实很简单，但短期内没有计划，所以项目会进入大概半年的维护期。仅更新驱动但问题修复会延期。（原则上讲也没什么问题了）<br />
-
-2020-04-11 续<br />
-
-Hotpatch补丁基本已经趋近于完善了，Error该修的都修了，改做操作系统判断的也都做了，基本上这套Hotpatch转OC是没有什么大的问题的。
-
-2020-05-05 续<br />
-
-OC坑已填，剩下一个月不更新，抓紧补论文。
-
-## 鸣谢
-
-以下排名不分先后：<br>
-[Acidanthera](https://github.com/acidanthera)提供的各种驱动、[Clover团队](https://github.com/CloverHackyColor)提供的引导及部分驱动、[Daliansky（黑果小兵）](https://github.com/daliansky/)及其[博客](https://blog.daliansky.net/)提供的首版引导和DW1820A驱动方式及睡眠修复方法、[Bat.bat](https://github.com/williambj1)提供的Envy13亮度快捷键以及电池补丁、[Aris](https://ariser.cn)提供的10.14.5以及HDMI补丁、[JardenLiu](https://github.com/jardenliu)提供的XPS15教程以及一系列讲解以供深入学习Hackintosh、[Rehabman](https://bitbucket.org/%7Be26fb9ce-5cc2-4e36-8576-7a8faae8e194%7D/)提供的一系列补丁、以及很多朋友提供的问题反馈！
+All (names are arranged) in no particular order: <br>
+[Acidanthera](https://github.com/acidanthera) for lots of kexts,[Clover Team](https://github.com/CloverHackyColor) for bootloader and FakeSMC kexts, [Daliansky](https://github.com/daliansky/) and his [blog](https://blog.daliansky.net/) for his configuration and sleep fix, [Bat.bat](https://github.com/williambj1) for Envy 13 bright function key and Battery hotpatch, [Aris](https://ariser.cn) for HDMI patch, [JardenLiu](https://github.com/jardenliu) for XPS15 and taught me a lot in Hackintosh, [Rehabman](https://bitbucket.org/%7Be26fb9ce-5cc2-4e36-8576-7a8faae8e194%7D/) for series of hotpatches, and lots of friends test and suggestions. 
 
 
 
-请勿使用此项目用作商业目的<br>
+Do NOT use this project for commercial purposes<br />
+QQ Group:
 惠普电脑装Mac交流群：543758684<br>
 ENVY13(2017)交流群：247548827<br>
