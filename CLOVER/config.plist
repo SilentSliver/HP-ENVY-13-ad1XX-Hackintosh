@@ -240,8 +240,8 @@
 			<dict>
 				<key>AAPL,slot-name</key>
 				<string>Built In</string>
-				<key>RM,device-id</key>
-				<data>cJ0AAA==</data>
+				<key>alc-delay</key>
+				<integer>500</integer>
 				<key>device_type</key>
 				<string>Audio device</string>
 				<key>hda-gfx</key>
