@@ -33,14 +33,14 @@ My Hackintosh works fine with the latest configuration on `10.15`. It might comm
 
 ## 2. Installation(This part need some time to translate)
 
-1. 下载macOS原版镜像（或者其他人提供带引导的也可以），文件格式为`dmg`；
-2. 使用[`etcher`](https://www.balena.io/etcher/)等工具刻录镜像至U盘；
-3. 将提供的`CLOVER`文件夹通过各种手段（不一一列举）放在硬盘的`EFI`分区中的`EFI`文件夹下，并使用`bootice`等工具添加引导项；
-4. 重启在HP logo还未出现时按`F10`进入`BIOS`，然后在`系统设置`-`启动选项`-`操作系统的启动管理员`中选中`CLOVER`并按`F6`调整至第一个并按两次`F10`保存退出`BIOS`；
-5. 在`CLOVER`中选择`macOS Install from XXX(表示移动设备名称)`进入安装界面；
-6. 这步和白果一样，分区啊什么乱七八糟的。这里需要记下自己安装macOS的分区名称；
-7. 安装中间会重启一次，重启后在`CLOVER`中选择`macOS Install from XXX(这次是你的分区名称)`，这步安装完成后会再次重启。如果在这步出现问题请参考下面的问题部分1；
-8. 待第七步结束之后你的`CLOVER`中应该会出现一个`macOS`的选项，回车键进入就可以基本正常使用了~~，如果不能正常使用的话请参考问题部分2~~，恭喜你已经迈出进入macOS大门的第一脚！！！
+1. Download your macOS image with suffix `dmg`;
+2. Use tools like [`etcher`](https://www.balena.io/etcher/) to flash the OS image you have downloaded to SD card & USB drive;
+3. Cope `CLOVER` folder from my repo to `EFI` folder in `EFI` partition at your hard drive, then add Clover to your boot options by tools like `bootice`;
+4. Reboot your Computer and press `F10` before HP logo showing on screen to boot in `BIOS`, then select `CLOVER`  at `System Configutation`-`Boot Sequence`-`Operation System Boot Manager` and press `F6` to make it at the head of list, finally press twice `F10` to save your config and exit `BIOS`;
+5. In `CLOVER` select `macOS Install from XXX(Your SD card & USB drive label)` to boot in macOS Install;
+6. This step is same as real Mac, you can re-part your disk and so on. You need remember disk label you decide to install your macOS on;
+7. Your device will reboot after install, then select `macOS Install from XXX (Disk label from Step 6)` in `CLOVER`, and reboot several times (you can take off your SD card & USB drive now). 
+8. After Step 7 there will be a `macOS` option in `CLOVER`, select it and press `Enter`;
 9. 请使用Clover Configurator或者其他什么工具都行，**注入自己的三码！！！注入自己的三码！！注入自己的三码！！！**，然后在`系统偏好设置-节能`中关掉**所有**`电能小憩`和`唤醒以供网络访问`的选项，然后基本上就算**大功告成**啦！！！
 
 ## 3. Customization
