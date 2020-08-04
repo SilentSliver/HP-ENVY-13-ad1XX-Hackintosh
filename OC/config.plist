@@ -24,6 +24,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>BatteryIhject</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-BAT0.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>X86 Inject</string>
 				<key>Enabled</key>
 				<false/>
@@ -1001,6 +1009,8 @@
 			<integer>0</integer>
 			<key>DisplayLevel</key>
 			<integer>0</integer>
+			<key>SerialInit</key>
+			<false/>
 			<key>SysReport</key>
 			<false/>
 			<key>Target</key>
