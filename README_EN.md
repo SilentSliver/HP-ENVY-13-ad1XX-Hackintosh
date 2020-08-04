@@ -20,7 +20,8 @@ A Configuration of Hackintosh for HP Envy 13
 
 ### 2020-07-14
 
-1. Update `Clover` to 5119
+1. Update `Clover` to 5120
+2. Update `OpenCore` to 0.6.0
 
 **Support `macOS 10.15.5`**
 For more details, please visit [ChangeLog.md](./ChangeLog.md)
