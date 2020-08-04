@@ -408,6 +408,8 @@
 				<string>onboard-1</string>
 				<key>model</key>
 				<string>Intel UHD Graphics 620</string>
+				<key>enable-hdmi-dividers-fix</key>
+				<data>AQAAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -1095,7 +1097,7 @@
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>boot-args</key>
-				<string>-lilubetaall -liluforce vsmcgen=1 brcmfx-country=#a bpr_probedelay=100 bpr_initialdelay=300 bpr_postresetdelay=300 -disablegfxfirmware</string>
+				<string>-lilubetaall -liluforce vsmcgen=1 -igfxtypec brcmfx-country=#a bpr_probedelay=100 bpr_initialdelay=300 bpr_postresetdelay=300 -disablegfxfirmware</string>
 				<key>csr-active-config</key>
 				<data>5wsAAA==</data>
 				<key>prev-lang:kbd</key>
