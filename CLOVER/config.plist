@@ -220,7 +220,7 @@
 		<key>DefaultVolume</key>
 		<string>LastBootedVolume</string>
 		<key>Arguments</key>
-		<string>-lilubetaall slide=0 gfxrst=1 -igfxhdmidivs nv_disable=1 brcmfx-country=#a bpr_probedelay=100 bpr_initialdelay=300 bpr_postresetdelay=300</string>
+		<string>-lilubetaall slide=0 gfxrst=1 nv_disable=1 brcmfx-country=#a bpr_probedelay=100 bpr_initialdelay=300 bpr_postresetdelay=300</string>
 		<key>Debug</key>
 		<false/>
 		<key>XMPDetection</key>
@@ -331,34 +331,28 @@
 			<dict>
 				<key>AAPL,GfxYTile</key>
 				<data>AQAAAA==</data>
-				<key>framebuffer-unifiedmem</key>
-				<data>AAAAwA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
-				<key>framebuffer-con0-alldata</key>
-				<data>AAASAAIAAACYAAAAAQUSAAAEAACHAQAAAgQSAAAEAACHAQAA</data>
-				<key>disable-external-gpu</key>
-				<data>AQAAAA==</data>
 				<key>device-id</key>
 				<data>FlkAAA==</data>
+				<key>disable-external-gpu</key>
+				<data>AQAAAA==</data>
 				<key>framebuffer-fbmem</key>
 				<data>AACQAA==</data>
-				<key>device_type</key>
-				<string>VGA compatible controller</string>
 				<key>hda-gfx</key>
 				<string>onboard-1</string>
+				<key>enable-hdmi-dividers-fix</key>
+				<data>AQAAAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
 				<key>enable-hdmi20</key>
 				<data>AQAAAA==</data>
-				<key>AAPL,slot-name</key>
-				<string>Built In</string>
 				<key>AAPL,ig-platform-id</key>
 				<data>AAAWWQ==</data>
-				<key>model</key>
-				<string>Intel UHD Graphics 620</string>
-				<key>framebuffer-con0-enable</key>
+				<key>force-online</key>
 				<data>AQAAAA==</data>
+				<key>framebuffer-unifiedmem</key>
+				<data>AAAAwA==</data>
 			</dict>
 		</dict>
 		<key>SetIntelBacklight</key>
