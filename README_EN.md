@@ -20,10 +20,11 @@ A Configuration of Hackintosh for HP Envy 13
 
 ### 2020-07-14
 
-1. Update `Clover` to 5120
-2. Update `OpenCore` to 0.6.0
+1. Update `Clover` to 5122
+2. Update `OpenCore` to 0.6.1
+3. Update All Kexts to latest stable version
 
-**Support `macOS 10.15.5`**
+**`Clover` branch support `macOS 10.15.6` and `OpenCore` branch support `macOS 11 beta 6`**
 For more details, please visit [ChangeLog.md](./ChangeLog.md)
 
 ## 1. Abstract
