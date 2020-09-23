@@ -6,7 +6,7 @@ DefinitionBlock ("", "SSDT", 2, "HPENVY", "SLP5", 0x00000000)
     External (ZWAK, MethodObj)
     External (S5WL, FieldUnitObj)
     External (RMDC.DGOF, MethodObj)
-    External (_SB_.PCI0.LPCB.H_EC.LWKE, FieldUnitObj)
+    External (_SB_.PCI0.LPCB.EC.LWKE, FieldUnitObj)
     
     If (_OSI ("Darwin"))
     {
@@ -27,7 +27,7 @@ DefinitionBlock ("", "SSDT", 2, "HPENVY", "SLP5", 0x00000000)
         ZPTS(Arg0)
         If (_OSI ("Darwin")&&(Arg0 == 0x05)&&S5WL)
         {
-            \_SB.PCI0.LPCB.H_EC.LWKE = 0
+            \_SB.PCI0.LPCB.EC.LWKE = 0
         }
     }
     

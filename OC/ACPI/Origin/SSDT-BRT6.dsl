@@ -6,12 +6,12 @@
 */
 DefinitionBlock ("", "SSDT", 2, "HPENVY", "BRT6", 0x00000000)
 {
-    External (_SB_.PCI0.LPCB.H_EC, DeviceObj)
+    External (_SB_.PCI0.LPCB.EC, DeviceObj)
     External (_SB_.PCI0.LPCB.PS2K, DeviceObj)
-    External (_SB_.PCI0.LPCB.H_EC.XQ13, MethodObj)
+    External (_SB_.PCI0.LPCB.EC.XQ13, MethodObj)
     External (HKNO, FieldUnitObj)
     //Bright Function Key Inject
-    Scope (_SB.PCI0.LPCB.H_EC)
+    Scope (_SB.PCI0.LPCB.EC)
     {
         Method (_Q13, 0, Serialized)  // _Qxx: EC Query, xx=0x00-0xFF
         {
@@ -33,7 +33,7 @@ DefinitionBlock ("", "SSDT", 2, "HPENVY", "BRT6", 0x00000000)
             }
             Else
             {
-                 \_SB.PCI0.LPCB.H_EC.XQ13 ()
+                 \_SB.PCI0.LPCB.EC.XQ13 ()
             }
         }
     }

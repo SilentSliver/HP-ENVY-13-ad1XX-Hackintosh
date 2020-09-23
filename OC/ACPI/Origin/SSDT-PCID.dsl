@@ -44,14 +44,6 @@ DefinitionBlock ("", "SSDT", 2, "DXPS", "PCID", 0x00000000)
                         {4}
                 })
             }
-            Device (EC)
-            {
-                Name (_HID, "ACID0001")
-                Method (_STA, 0, NotSerialized)
-                {
-                    Return (0x0F)
-                }
-            }
             Device (PMCR)
             {
                 Name (_HID, EisaId ("APP9876"))
